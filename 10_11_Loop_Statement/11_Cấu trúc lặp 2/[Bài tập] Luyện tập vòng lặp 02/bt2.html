@@ -10,13 +10,21 @@
     <h1>Giai thừa</h1>
 </body>
 <script>
-    let I = +prompt('Nhập số muốn tính giai thừa');
-    for (let i = 4; i > 1; i--) {
-        I = I*(i-1);
-    }
-    document.write(I);
+    let I = +prompt('Nhập số cần tính giai thừa');
+    // for (let i = I; i > 1; i--) {
+    //     I = I*(i-1);
+    // }
+    // document.write(I);
 
-    
+    let GT = I;
+    for (let i = 1; i < I; i++) {
+         GT = GT*i;
+    }
+    document.write(GT);
    
+
+
+
+
 </script>
 </html>

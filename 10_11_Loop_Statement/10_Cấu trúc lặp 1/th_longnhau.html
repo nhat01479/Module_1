@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tạo bảng</h1>
+</body>
+<script>
+
+// let sout, i, j;
+// sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+// i = j = 1;
+// while (i <= 10) {
+//     sout = sout + "<tr>";
+//     while (j <= 10) {
+//         sout = sout + "<td>" + i * j + "</td>";
+//         j++;
+//     }
+//     sout = sout + "</tr>";
+//     j = 1;
+//     i++;
+// }
+// sout = sout + "</table>";
+// document.write(sout);
+
+//____________________________________________________________________________________________________
+
+// var Table = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"         // Tạo biến bảng bằng cách mở 1 thẻ <table>
+// for (i = 1; i <=10; i++) {                                                           // i chạy từ 1 tới 10, mỗi lần tạo ra 1 hàng với cặp thẻ tr;
+//     Table = Table + '<tr>';                                                          // j chạy từ 1 tới 10, mỗi lần tạo ra 1 ô với cặp thẻ td;
+//     for (j = 1; j <=10; j++) {                                                       // i*j nằm trong cặp thẻ <td></td>
+//         Table = Table + '<td>' + i*j + '</td>';       
+//     }
+//     Table = Table + '</tr>';
+// }
+// Table = Table + "</table>";                                                          // Kết thúc bảng với thẻ </table>
+// document.write(Table);
+
+//_____________________________________________Bảng với while loop_________________________________________________________________
+
+
+var Table = '<table border="1" width="300" cellspacing="0" cellpadding="3">';
+var i = 1;
+var j = 1;
+while (i <= 10) {
+    Table = Table + '<tr>';
+        while (j <= 10) {
+            Table = Table + '<td>' + i*j + '</td>';
+            j++;
+        }
+    Table = Table + '</tr>';
+    j=1;                                        // Kết thúc vòng lặp j thì j đang bằng 11; set lại j = 1 để chạy lại vòng lặp
+    i++;
+}   
+Table = Table + '</table>';
+document.write(Table);
+</script>
+</html>

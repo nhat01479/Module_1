@@ -6,19 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #td1 {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    #td2 {
+        position: absolute;
+        left: 145px;
+        top: 0px;
+    }
+    #td3 {
+        position: absolute;
+        left: 0px;
+        top: 105px;
+    }
+    * {
+        color: red;
+    }
+    #td1, #td2, #td3:hover {
+        cursor: pointer;
+        
+    }
+</style>
 <body>
-    <pre id="aaa"></pre>
     
+    
+        
+            <pre id="td1"></pre>
+            <pre id="td2"></pre>
+            <pre id="td3"></pre>
+     
 </body>
 <script>
-    let str = '';
-    for (let i = 0; i < 5; i++) {
-        for (let j = 0; j <= i; j++) {      //Tam giác vuông 4 dấu sao
-        str += "* ";
-        }
-        str += "\n";
-    }
-    console.log(str);
+    // let str = '';
+    // for (let i = 0; i < 5; i++) {
+    //     for (let j = 0; j <= i; j++) {      //Tam giác vuông 4 dấu sao
+    //     str += "* ";
+    //     }
+    //     str += "\n";
+    // }
+    // console.log(str);
 
 //---------------------------------------
 
@@ -35,6 +64,152 @@
 // document.write(str);
 // document.write('<br/>');
 
-document.getElementById('aaa').innerText = str;
+// document.getElementById('aaa').innerText = str;
+
+//-----------------------------------------------------------------------
+// let str = '';
+// for (i=1; i<=10; i++) {
+//     for (j=1; j<=10; j++) {
+//         if (j>=i) str += '* ';
+//         else str += ' ';                               //Tam giác đều ngược
+//     }
+//     str += '\n';
+// }
+// document.getElementById('aaa').innerText = str;
+
+//-----------------------------------------------------------------------
+
+
+// let str = '';
+//     for (let i = 0; i < 10; i++) {
+//         for (let j = 0; j < 10; j++){
+//             if (j>=(10-i)) str += '* ';      //Tam giác đều xuôi
+//             else str += ' ';
+//         }
+//         str += '\n';
+//     }
+//     console.log(str)
+
+//-----------------------------------------------------
+// *
+// **
+// ***
+// ****
+// *****
+
+// let str = '';
+// for (i=1; i<=5; i++) {
+//     for (j=1; j<=i; j++) {
+//         str += '* ';
+//     }
+//     str += '\n';
+// }
+// document.getElementById('aaa').innerText = str;
+
+
+//-----------------------------------------------------
+
+
+
+// let str = '';
+// for (i = 1; i <=5; i++) {
+//     for (j = 1; j <= 5; j++) {                     // *****
+//         if (j <= 6 - i) str += '*';                // ****
+//         else str += ' ';                           // ***
+//     }                                              // **
+//     str += '\n';                                   // *
+// }                                   
+// document.getElementById('aaa').innerText = str;
+
+//________________________________________________________
+
+ //    *
+ //   **
+ //  ***
+ // ****
+// *****
+
+// let str = '';
+// for (i = 1; i <=5; i++) {
+//     for (j = 1; j <= 5; j++) {                     
+//         if (j > 5 - i) str += '*';                 
+//         else str += ' ';                           
+//     }                                             
+//     str += '\n';                                   
+// }                                   
+// document.getElementById('aaa').innerText = str;
+//________________________________________________________________________
+
+// *****
+//  ****
+//   ***
+//    **
+//     *
+
+// let str = '';
+// for (i = 1; i <=5; i++) {
+//     for (j = 1; j <= 5; j++) {                     
+//         if (j >= i ) str += '*';                 
+//         else str += ' ';                           
+//     }                                             
+//     str += '\n';                                   
+// }                                   
+// document.getElementById('aaa').innerText = str;
+
+//----------------------------------------------------------------------
+
+//  *********************
+//  *                   *
+//  *                   *
+//  *                   *
+//  *                   *
+//  *                   *
+//  *********************
+//  let str='';
+//  for (i=1 ; i<=7; i++) {
+//     for (j=1 ; j<=21 ; j++) {
+//         if (i==1 || i==7) str += '*';
+//         else if (j==1 || j==21) str += '*';
+//             else str += ' ';
+//     }
+//     str += '\n';
+//  }
+//  document.getElementById('aaa').innerText = str;
+
+
+
+
+
+let str = '';
+    for (let i = 3; i < 10; i++) {
+        for (let j = 0; j < 10; j++){
+            if (j>=(10-i)) str += '* ';      //Tam giác đều xuôi
+            else str += ' ';
+        }
+        str += '\n';
+    }
+    document.getElementById('td1').innerText = str;
+
+    let str1 = '';
+    for (let k = 3; k < 10; k++) {
+        for (let l = 0; l < 10; l++){
+            if (k>=(10-l)) str1 += '* ';      //Tam giác đều xuôi
+            else str1 += ' ';
+        }
+        str1 += '\n';
+    }
+    document.getElementById('td2').innerText = str1;
+    
+
+let str2 = '';
+for (i=1; i<=20; i++) {
+    for (j=1; j<=20; j++) {
+        if (j>=i) str2 += '* ';
+        else str2 += ' ';                               //Tam giác đều ngược
+    }
+    str2 += '\n';
+}
+document.getElementById('td3').innerText = str2;
 </script>
+
 </html>
