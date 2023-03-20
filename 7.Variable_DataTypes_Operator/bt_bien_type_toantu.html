@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập</title>
+    <style>
+        table, tr, td{
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        td{
+            width:200px;
+            text-align: center;
+        }
+        .inputt{
+            border: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tính điểm trung bình</h1>
+    <p id="dtb"></p>
+    <p id="tong"></p>
+    <button onclick="Tinhdiem()">Nhập điểm</button>
+    <br>
+    <hr>
+
+
+
+    <h1>Đổi nhiệt độ</h1>  
+     
+        <table border="1">
+            <tr>
+                <td>Độ C</td>
+                <td rowspan="2" style="width:100px;">
+                    <button onclick="CtoF()">C to F</button>
+                </td>
+                <td>Độ F</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="nhapdoC" class="inputt"></td>
+                <td id="doFF"></td>
+            </tr>
+        </table>
+    <br>
+    <hr>
+
+
+    
+    <h1>Tính diện tích và chu vi hình tròn</h1>
+    <button onclick="do_something()">Nhập bán kính</button>
+    <p id="bankinh"></p>
+    <p id="dientich"></p>
+    <p id="chuvi"></p>
+</body>
+<script src="baitap.js">
+    
+    
+
+ 
+
+
+//     // Tính điểm trung bình
+// let diemLy, diemHoa, diemSinh;
+// diemLy = prompt('Nhập điểm Lý');
+// diemHoa = prompt('Nhập điểm Hóa');
+// diemSinh = prompt('Nhập điểm Sinh');
+// let Ly = parseInt(diemLy);
+// let Hoa = parseInt(diemHoa);
+// let Sinh = parseInt(diemSinh);
+// let dtb = (Ly + Hoa + Sinh)/3;
+// let tong = Ly + Hoa + Sinh;
+// alert("Điểm trung bình là: " + dtb);
+// alert("Tổng điểm là: " + tong);
+
+// // Chuyển đổi nhiệt độ
+// let Celsius = prompt('Nhập độ C');
+// let F = 9*Celsius/5 + 32;
+// alert('Độ F là: ' + F);
+
+// // Diện tích và chu vi hình tròn
+// let radius = prompt('Nhập bán kính');
+// const pi = 3.14;
+// let S = radius*radius*pi;
+// let C = 2*radius*pi;
+// alert("Diện tích hình tròn là: " + S);
+// alert("Chu vi hình tròn là: " + C);
+</script>
+</html>

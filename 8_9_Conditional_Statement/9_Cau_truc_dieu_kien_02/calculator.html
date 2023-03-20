@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 2px solid;
+        }
+        td {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
+        button {
+            width: 40px;
+            height: 40px;
+            margin: 1px;
+            border-radius: 5px;
+        }
+        input {
+            width: 200px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td colspan="4"><input style="text-align: right;" id='result' type="text" ></td>
+            </tr>
+            <tr>
+                <td><button type='button' value="1" onclick="btn(this.value)">1</button></td>
+                <td><button type='button' value="2" onclick="btn(this.value)">2</button></td>
+                <td><button type='button' value="3" onclick="btn(this.value)">3</button></td>
+                <td><button type='button' value="+" onclick="btn(this.value)">+</button></td>
+            </tr>
+            <tr>
+                <td><button type='button' value="4" onclick="btn(this.value)">4</button></td>
+                <td><button type='button' value="5" onclick="btn(this.value)">5</button></td>
+                <td><button type='button' value="6" onclick="btn(this.value)">6</button></td>
+                <td><button type='button' value="-" onclick="btn(this.value)">-</button></td>
+            </tr>
+            <tr>
+                <td><button type='button' value="7" onclick="btn(this.value)">7</button></td>
+                <td><button type='button' value="8" onclick="btn(this.value)">8</button></td>
+                <td><button type='button' value="9" onclick="btn(this.value)">9</button></td>
+                <td><button type='button' value="*" onclick="btn(this.value)">*</button></td>
+            </tr>
+            <tr>
+                <td><button type='button' value="AC" onclick="reset()">AC</button></td>
+                <td><button type='button' value="0" onclick="btn(this.value)">0</button></td>
+                <td><button type='button' value="=" onclick="result()">=</button></td>
+                <td><button type='button' value="/" onclick="btn(this.value)">/</button></td>
+            </tr>
+           
+        </tbody>
+    </table>
+</body>
+<script>
+    let output = document.getElementById('result');
+    function btn(value) {
+        output.value += value;
+    }
+    function reset() {
+        output.value = '';
+    }
+    function result() {
+        output.value = eval(output.value);
+    }
+   
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td {
+        border: 1px solid;
+      }
+      td {
+        width: 15px;
+        height: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Giải phương trình bậc 2</h1>
+  </body>
+  <script>
+    let a = +prompt("Nhập hằng số a");
+    let b = +prompt("Nhập hằng số b");
+    let c = +prompt("Nhập hằng số c");
+    let delta = b * b - 4 * a * c;
+    console.log(delta);
+    let x;
+    if (a != 0) {
+      if (delta == 0) x = "Phương trình có nghiệm kép x1 = x2 = " - b / (2 * a);
+      else if (delta > 0)
+        x =
+          "Phương trình có 2 nghiệm là x1 = " +
+          (-b + Math.sqrt(delta)) / (2 * a) +
+          " và x2 = " +
+          (-b - Math.sqrt(delta)) / (2 * a);
+      else x = "Phương trình vô nghiệm";
+    } else {
+      if (b != 0) x = "Phương trình có nghiệm duy nhất là " + -c / b;
+      else if (b == 0 && c == 0) x = "Phương trình vô số nghiệm";
+           else if (b == 0 && c != 0) x = "Phương trình vô nghiệm";
+    }
+    document.write(`${x}`);
+  </script>
+</html>

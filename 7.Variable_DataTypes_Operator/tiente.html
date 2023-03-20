@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi tiền</title>
+    <style>
+        table,td{
+            border:none;
+            text-align: center;
+        }
+        td{
+            width: 150px;
+        }
+        
+    </style>
+</head>
+<body>     
+        <table>
+            <caption><h3>Chuyển đổi tiền tệ</h3></caption>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th rowspan="2"><button onclick="doitien()">Convert</button></th>
+            </tr>
+            <tr>
+                <td><input id="money" type="number"></td>
+                <td><select name="" id="value1">
+                    <option value="usd">USD</option>
+                    <option value="vnd">VND</option>                    
+                </select></td>
+                <td><select name="" id="value2">
+                    <option value="vnd">VND</option>
+                    <option value="usd">USD</option>                    
+                </select></td>
+            </tr>            
+        </table>
+    
+    <p id="ketqua"></p>
+</body>
+<script>
+    // function doitien(){
+    // let USD=document.getElementById('money').value;
+    // const rate=23000;
+    // let VND=USD*rate;
+    // document.getElementById('ketqua').innerHTML='Kết quả: ' + USD + ' USD' + ' = ' + VND + ' VND';
+    // }
+    function doitien(){
+        let amount=document.getElementById('money').value;
+        const usdrate=23000;
+        const vndrate=1/23000;
+        let value1=document.getElementById('value1').value;
+        let value2=document.getElementById('value2').value;
+        let VND=usdrate*amount;
+        let USD=vndrate*amount;
+        if(value1=='usd' && value2=='vnd'){
+            document.getElementById('ketqua').innerText='Kết quả: ' + amount + ' USD' + ' = ' + VND + ' VND';
+        }
+        else if(value1=='vnd' && value2=='usd'){
+            document.getElementById('ketqua').innerText='Kết quả: ' + amount + ' VND' + ' = ' + USD + ' USD';
+        }
+        else if(value1='vnd'){
+            document.getElementById('ketqua').innerText='Kết quả: ' + amount + 'VND';
+        }
+        else if(value1='usd'){
+            document.getElementById('ketqua').innerText='Kết quả: ' + amount + 'USD';
+        }
+    }
+
+    
+
+</script>
+</html>

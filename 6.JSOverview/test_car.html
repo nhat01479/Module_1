@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <img id="xoay" src="images/car_1.png" alt="">
+    </div>   
+    <div style="text-align: center;">   
+        <button id="top" onclick="xoaythang()">TOP</button><br><br>
+        <button id="left" onclick="xoaytrai()">LEFT</button>
+        <button id="right" onclick="xoayphai()">RIGHT</button><br><br>
+        <button id="bot" onclick="xoayxuong()">BOT</button>
+    </div>
+      
+</body>
+<script>
+    function xoaythang(){        
+            document.getElementById('xoay').style.transform='rotate(0deg)';
+        }
+    function xoaytrai(){        
+            document.getElementById('xoay').style.transform='rotate(-90deg)';
+        }
+    function xoayphai(){        
+            document.getElementById('xoay').style.transform='rotate(90deg)';
+        }
+    function xoayxuong(){        
+            document.getElementById('xoay').style.transform='rotate(180deg)';
+        }
+
+</script>
+</html>

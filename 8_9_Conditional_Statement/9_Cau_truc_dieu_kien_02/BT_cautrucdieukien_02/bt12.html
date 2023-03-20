@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="pv" placeholder="Số tiền hiện tại PV"><br>
+    <input type="text" id="laisuat" placeholder="Lãi suất i"><br>
+    <input type="text" id="year" placeholder="Số năm n"><br>    
+    <input type="text" id="FV" placeholder="Giá trị tương lai FV"><br>
+    <input type="button" value="Tính lãi" id="Tienlai" onclick="handleFV()"><br>
+    <p id="result"></p>
+
+</body>
+<script>
+
+function handleFV(){
+    let pv = +document.getElementById('pv').value;
+    let i = +document.getElementById('laisuat').value;
+    let n = +document.getElementById('year').value;
+    let FV = pv * Math.pow((1+i),n);
+    document.getElementById('FV').value = FV;
+    let tienlai = (FV-pv);
+    document.getElementById('result').innerText = `Tiền lãi là: ${tienlai}`;
+}
+</script>
+</html>

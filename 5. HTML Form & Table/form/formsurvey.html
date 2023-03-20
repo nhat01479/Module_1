@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form survey</title>
+    <style>
+        fieldset {
+            border: none;
+        }
+        label{
+            font-weight:bold;
+            padding: 10px;
+        }
+        .table.table_2 td{            
+            border: 1px solid;
+            padding: 1px;
+            height: 40px;
+            
+        }
+        .table.table_2 tr:nth-child(odd){
+            background-color: rgb(180, 180, 168);
+        }
+        table, td{            
+            border-collapse: collapse;            
+        }
+        tbody tr{
+            text-align: center;           
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <h1>Market Research Survey</h1>
+            <p>Please take a few moments to complete this satisfaction survey.</p>
+        </fieldset>
+        <hr style="border: 0.5px dotted;">
+        <fieldset>
+            <label>What is your age range?</label> 
+            <br> <br>
+            <select style="width: 400px;">
+                <option value="18-24">18-24</option>
+                <option value="25-34">25-34</option>
+                <option value="35-50">35-50</option>
+                <option value="50+">50+</option>
+            </select>
+        </fieldset>
+        <fieldset> 
+            <label>What is your yearly income range?</label>
+            <br><br>
+            <select style="width: 400px;">
+                <option value="&dollar;0 - &dollar;25,000">&dollar;0 - &dollar;25,000</option>
+                <option value="&dollar;0 - &dollar;25,000">&dollar;25,001 - &dollar;50,000</option>
+                <option value="&dollar;50,001 - &dollar;100,000">&dollar;50,001 - &dollar;100,000</option>
+                <option value="&dollar;100,000+">&dollar;100,000+</option>
+            </select>
+        </fieldset>        
+        <fieldset>
+            <label>Gender Identity</label><br><br>
+                <input type="radio" name="gender">Male <br>
+                <input type="radio" name="gender">Female <br>
+                <input type="radio" name="gender">Nonbinary <br>
+                <input type="radio" name="gender">Other <br>
+                <input type="text">
+        </fieldset>
+        <fieldset>
+            <label>Which of the following products have your purchased in the last 2 months. Please check all that apply?</label>
+                <br><br>
+                <input type="checkbox">Product 1 <br>
+                <input type="checkbox">Product 2 <br>
+                <input type="checkbox">Product 3 <br>
+        </fieldset>
+        <fieldset>
+            <label>How often would you use our new product?</label>
+                <br><br>
+                <input type="checkbox">Daily <br>
+                <input type="checkbox">Weekly <br>
+                <input type="checkbox">Monthly <br>
+        </fieldset>
+        <fieldset>
+            <label>What would you pay for the new product?</label> <br><br>
+
+                <table>
+                    <tr>
+                        <td>&dollar;</td>
+                        <td><input type="text"> &#46; </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Dollars</td>
+                        <td>Cents</td>
+                    </tr>
+                </table>
+        </fieldset>
+        <fieldset>
+            <label>What features would you like to see in the new product?</label>
+            <br><br>
+            <textarea name="" id="" cols="80" rows="5"></textarea>
+        </fieldset>
+        <fieldset>
+            <label>Please rate your level of agreement with the following statements.</label> 
+            <br><br>
+            <table class="table table_2">
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td width="80px">Strongly Disagree</td>
+                    <td width="80px">Disagree</td>
+                    <td width="80px">Agree</td>
+                    <td width="80px">Strong Agree</td>
+                </tr>
+                <tr>
+                    <td align="left">Our products are priced fairly</td>
+                    <td>
+                        <input type="radio" name="agree">
+                        <br> 1
+                    </td>
+                    <td> <input type="radio" name="agree">
+                        <br> 2
+                    </td>
+                    <td>
+                        <input type="radio" name="agree">
+                        <br> 3
+                    </td>
+                    <td>
+                        <input type="radio" name="agree">
+                        <br> 4
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left">Our products are high quality.</td>
+                    <td><input type="radio" name="agree">
+                        <br> 1
+                    </td>
+                    <td> <input type="radio" name="agree">
+                        <br> 2
+                    </td>
+                    <td>
+                        <input type="radio" name="agree">
+                        <br> 3
+                    </td>
+                    <td>
+                        <input type="radio" name="agree">
+                        <br> 4
+                    </td>    
+                </tr>
+                <tr>
+                    <td align="left">You would recommend our product to a friend or coworker.</td>
+                    <td><input type="radio" name="agree">
+                        <br> 1
+                    </td>
+                    <td> <input type="radio" name="agree">
+                        <br> 2
+                    </td>
+                    <td>
+                        <input type="radio" name="agree">
+                        <br> 3
+                    </td>
+                    <td>
+                        <input type="radio" name="agree">
+                        <br> 4
+                    </td>
+                </tr>
+            </table>    
+            <br>        
+        <input type="submit" value="Submit">
+        </fieldset>
+        <br>
+    </form>
+</body>
+</html>

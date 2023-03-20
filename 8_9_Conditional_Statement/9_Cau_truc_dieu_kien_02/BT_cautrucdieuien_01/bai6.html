@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính hoa hồng theo doanh số</h1>
+</body>
+<script>
+    let a = +prompt('Nhập doanh số');
+    let b;
+    // if (a<0) alert('Nhập sai');
+    //     else if (a>=100000) b=0.15*a;
+    //          else if (a>=80000) b=0.12*a;
+    //               else if (a>=70000) b=0.1*a;
+    // else b=0.08*a;
+    // document.write('Hoa hồng là : ' + b + ' nghìn VND');
+
+switch (true) {
+    case a>=100000:
+        b = 0.15 * a;
+        break;
+    case a>=80000:
+        b = 0.12 * a;    
+        break;
+    case a>=70000:
+        b = 0.1 * a;
+        break;
+    case a<0:
+        alert('Nhập sai');
+        break;
+    default:
+        b = 0.08 * a;  
+}
+ document.write('Hoa hồng là : ' + b + ' nghìn VND');
+
+    
+</script>
+</html>

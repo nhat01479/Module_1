@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>Onmouseover/onmouseout</h1>
+    <button
+        onmouseover="innerText=Date()"
+        onmouseout="innerText='Hover to show Datetime'"
+        onclick="alert('Hello')"
+    >Hover to show Datetime</button>
+
+
+
+    <hr>
+
+
+
+    <h1>Show password - onclick - onfocus - onblur</h1>
+   <label>Mật khẩu</label><br>
+   <input id="showpw" type="password" onfocus="focusF()"
+                                      onblur="blurF()">
+
+   <br><br>
+
+   <button id="btn" onclick="ControlPassword()">Click to show password</button>
+
+
+
+   <hr>
+
+
+
+   <h1>Event onchange</h1>
+   <select id="myselect" onchange="do_something()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mescedes">Mescedes</option>
+        <option value="Volvo">Volvo</option>
+   </select>
+</body>
+<script>
+    function ControlPassword(){
+        if (document.getElementById('showpw').type=="password")
+        {   document.getElementById('showpw').type="text";
+            document.getElementById('btn').innerText="Click to hide password";
+        }  
+        else
+        {   document.getElementById('showpw').type="password";
+            document.getElementById('btn').innerText="Click to show password";
+        }             
+        }
+    // Focus: Chuyển nền sang màu vàng và type sang text
+    function focusF(){ 
+            document.getElementById('showpw').style.background = 'yellow';
+            document.getElementById('showpw').type = 'text';
+            }
+    // Blur: Chuyển chữ sang màu đỏ và type sang password
+    function blurF(){
+                document.getElementById('showpw').style.color = 'red';
+                document.getElementById('showpw').type = 'password';
+    }       
+
+
+    function do_something(){                                
+        alert('Lựa chọn của bạn là: '+ document.getElementById('myselect').value);
+        }
+    /*     Hoặc
+         var selectValue=document.getElementById('myselect').value  =====> Khai báo biến tên là "selectValue" 
+         alert(selectValue);                                               và gắn giá trị cho nó = "value" của element có id="myselect"
+    */                                                                      
+</script>
+</html>

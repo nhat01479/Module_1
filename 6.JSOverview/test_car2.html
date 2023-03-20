@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="width:612px;height:612px;text-align: center;">
+        <img id="rotated" src="images/car_3.png" alt="">
+    </div>
+    <div style="text-align: center;">
+        <button onclick="left()">Rotate</button>
+        <!-- <button onclick="right()">Turn Right</button> -->
+    </div>   
+</body>
+<script>
+   const rotated = document.getElementById('rotated');
+
+    let rotation = 0;
+    const angle = 45;
+    function left() { 
+    rotation = (rotation - angle) ;
+    rotated.style.transform = `rotate(${rotation}deg)`; //${rotation}: kết quả phép tính ở trên
+    }   
+         
+</script>
+</html>

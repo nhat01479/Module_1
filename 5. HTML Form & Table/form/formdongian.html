@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo form đơn giản</title>
+    <style>
+        tbody th, td{
+            padding:4px 8px;
+        }
+        caption{
+            background-color: rgb(255, 106, 0);
+            color: white;
+            font-size: 25px;
+        }
+        .thongtin{
+            color: blue;
+        }
+        .sothich{
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <!-- class
+            thongtin
+            sothich
+    -->
+    <form action="">
+    <fieldset style="width:500px;background-color: aqua;padding: 6px;"> 
+        <table style="width:500px;background-color: #fff;">
+            <caption>SỞ THÍCH CỦA BẠN</caption>
+            <tbody>
+                <tr>
+                    <td class="thongtin">Họ và tên</td>
+                    <td colspan="3"><input type="text" style="width:200px"></td>
+                </tr>
+                <tr>
+                    <td class="thongtin">Email</td>
+                    <td colspan="3"><input type="text" style="width:200px"></td>
+                </tr>
+                <tr>
+                    <td class="thongtin">Sở thích</td>
+                    <td class="sothich"><input type="checkbox">Thể thao</td>
+                    <td class="sothich"><input type="checkbox">Âm nhạc</td>
+                    <td class="sothich"><input type="checkbox">Đọc sách</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="sothich"><input type="checkbox">Lướt web</td>
+                    <td class="sothich"><input type="checkbox">Chơi game</td>
+                    <td class="sothich"><input type="checkbox">Điện ảnh</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="sothich"><input type="checkbox">Du lịch</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Gửi thông tin"></td>
+                    <td><input type="submit" value="Nhập lại"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>        
+        </table>
+    </fieldset>     
+    </form> 
+    <hr>
+    <h1>Form đăng ký học viên</h1>
+    <form action="">
+    <fieldset  style="width:500px;padding: 6px;">
+       <table  style="width:500px;background-color: rgb(238, 235, 165);">
+        <caption style="background-color: aquamarine;color:blue";>ĐĂNG KÝ HỌC VIÊN</caption>
+        <tbody>
+            <tr>
+                <td class="thongtin">Họ và tên</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td class="thongtin">Ngày sinh</td>
+                <td><input type="date" name="" id=""></td>
+            </tr>
+            <tr>
+                <td class="thongtin">Giới tính</td>
+                <td>
+                    <input type="radio" name="gender">Nam
+                    <input type="radio" name="gender">Nữ
+                    
+                    
+
+                </td>
+            </tr>
+            <tr>
+                <td class="thongtin">Địa chỉ</td>
+                <td><textarea name="" id="" cols="30" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td class="thongtin">Lớp</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">Chọn lớp</option>
+                    </select>                        
+                </td>
+            </tr>
+            <tr>
+                <td class="thongtin">Email</td>
+                <td><input type="email" required></td>
+            </tr>
+            <tr>
+                <td class="thongtin">Điện thoại</td>
+                <td><input type="tel" required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Đăng ký">
+                    <input type="submit" value="Nhập lại">
+                </td>
+            </tr>
+
+        </tbody>
+       </table>
+    </fieldset>
+
+
+    </form>   
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registaration <Form></Form></title>
+    <style>
+      tr td input{
+        width:400px;
+        height: 20px;
+        font-size: 15px;
+        text-align: left;    
+        font-family: Arial, Helvetica, sans-serif;
+      }      
+      form,table{
+        width: 600px;
+      }      
+      textarea{
+        width:400px;
+        height:80px;
+      }
+      .needfix{
+        width:15px;
+        height: 10px;
+        text-align: left;
+      }
+     h3{
+        color: rgb(155, 2, 2);
+     }
+     fieldset{
+        background-color: azure;
+     }
+     td{
+        font-size: 20px;
+        padding: 5px;
+     }
+
+    </style>    
+</head>
+<!-- <img src="https://slack-imgs.com/?c=1&o1=ro.gu&url=https%3A%2F%2Fwww.enjoysharepoint.com%2Fwp-content%2Fuploads%2F2021%2F06%2Fregistration-form-design-in-html-and-css-with-code.png" alt=""> -->
+<body>
+    <form action="">
+        <fieldset>
+            <table>
+                <caption>
+                    <h3><u>Student Registaration Form</u></h3>
+                </caption>
+                <tbody>
+                    <tr>
+                        <td style="width:200px">First Name:</td>
+                        <td><input type="text" placeholder="Enter your first name"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" placeholder="Enter your last name"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" placeholder="It should contain @"></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile:</td>
+                        <td><input type="tel" placeholder="Only 10 digits are allowed"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><input type="radio" class="needfix" name="'gender">Male<input type="radio" class="needfix" name="'gender">Female</td>
+                    </tr>
+                    <tr>
+                        <td>Day Of Birth</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><textarea name="" id="" cols="52" rows="5"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>City:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Area PIN:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Qualification</td>
+                        <td>
+                        <select>
+                            <option value="" style="height:40px;">Select Qualification</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">Specialization:</td>
+                        <td><input type="checkbox" class="needfix" name="'specia">Computer Science
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="needfix" name="'specia">Information Technology
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>                             
+                            <input type="checkbox" class="needfix" name="'specia">Computer Architecture                            
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="needfix" name="'specia">Tele Communication
+                        </td>
+                    </tr>                  
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td><button style="background-color: rgb(21, 121, 21);width:150px;height:40px;border:none;color:white;border-radius: 4px;">Registered</button></td>
+                        <td></td>
+                    </tr>                 
+                </tbody>
+            </table>
+        </fieldset>        
+    </form>
+</body>
+</html>

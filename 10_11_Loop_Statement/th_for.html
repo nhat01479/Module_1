@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>[Thực hành] Sử dụng vòng lặp for</h1>
+
+<script>
+
+// let i = 0;
+// let text;
+// for (; i<=5; i++){
+//     // document.write('The number is ' + i);
+//     // document.write('<br>');
+//     text = "The number is " + i + "<br>";  
+//     document.write(text);  
+// }
+
+
+//----------------------------------------------------------
+
+// let text = "";
+//     let i;
+//     for (i = 0; i < 5; i++) {
+//       text += "The number is " + i + "<br>";
+//     }
+//     document.write(text);
+
+//--------------------------------------------------
+
+let num = +prompt('Nhập số', '1');
+let total = 0;
+if (num <= 0) alert('Không hợp lệ');
+else {for (var i = 1; i <= num; i++){
+        total += i;
+}
+}
+document.write('Total từ 1 tới ' + num + ' là ' + total);
+</script>
+</body>
+</html>

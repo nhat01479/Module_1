@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <table>
+        <caption><h1>Tính thuế</h1></caption>
+        <tbody>
+            <tr>
+                <td>Thu nhập</td>
+                <td><input id='income' type="text"><button onclick="handleVAT()">Tính thuế</button><br></td>
+            </tr>            
+            <tr>
+                <td>Thuế phải nộp</td>
+                <td><input id='vat' type="text"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+  <img src="" alt="">
+</body>
+<script>
+function handleVAT(){
+    let income = Number(document.getElementById('income').value);
+    let VAT;
+    if (income<=0) {alert('Nhập sai')}
+        else if (income <= 5000000)  VAT = income * 0.05;
+        else if (income <= 10000000) VAT = income * 0.1 - 250000;
+        else if (income <= 18000000) VAT = income * 0.15 - 750000;
+        else if (income <= 32000000) VAT = income * 0.20 - 1650000;
+        else if (income <= 52000000) VAT = income * 0.25 - 3250000;
+        else if (income <= 80000000) VAT = income * 0.3 - 5850000;
+        else if (income > 80000000) VAT = income * 0.35 - 9850000;
+    document.getElementById('vat').value = VAT;
+}
+    
+
+
+</script>
+
+</html>

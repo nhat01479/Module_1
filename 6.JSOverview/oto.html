@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>  
+
+    <div style="width:612px;height:612px;text-align: center;">
+        <img id="orien" src="images/car_1.png" alt="">
+    </div>
+    <div style="text-align:center;width:612px;">
+        <button id="len" onclick='xoayL()'>TOP</button><br><br>
+        <button id="trai" onclick='xoayT()'>LEFT</button>    
+        <button id="phai" onclick='xoayP()'>RIGHT</button><br><br>
+        <button id="xuong" onclick='xoayX()'>BOT</button>
+    </div>
+    
+    <!-- <div style="text-align:center;width:612px;">
+        <button onclick='document.getElementById("orien").src="images/car_1.png"'>TOP</button><br><br>    
+        <button onclick='document.getElementById("orien").src="images/car_4.png"'>LEFT</button>
+        <button onclick='document.getElementById("orien").src="images/car_2.png"'>RIGHT</button><br><br>
+        <button onclick='document.getElementById("orien").src="images/car_3.png"'>BOT</button>
+    </div> -->
+    <hr><br>
+
+        <button id="rotate" onclick="rotateImage()">Rotate image</button>
+    <div style="width:612px;height:612px;text-align: center;">
+        <img id="rotated" src="images/car_3.png" alt="">
+    </div>
+</body>
+<script>
+    const orien = document.getElementById('orien');
+    function xoayT(){        
+        orien.style.transform = 'rotate(-90deg)';
+        }
+    function xoayP(){        
+        orien.style.transform = 'rotate(90deg)';        
+        }      
+    function xoayL(){        
+        orien.style.transform = 'rotate(0deg)';
+        }
+    function xoayX(){        
+        orien.style.transform = 'rotate(180deg)';
+        }
+
+// Cắt ngang tại đây
+
+
+    const rotated = document.getElementById('rotated');
+
+// Variable to hold the current angle of rotation
+    let rotation = 0;
+
+// How much to rotate the image at a time
+    const angle = 45;
+
+    function rotateImage() {
+  // Ensure angle range of 0 to 359 with "%" operator,
+  // e.g., 450 -> 90, 360 -> 0, 540 -> 180, etc.
+    rotation = (rotation + angle) ; //%360 (chia 360, không hiểu lắm)
+
+    rotated.style.transform = `rotate(${rotation}deg)`; //${rotation}: kết quả phép tính ở trên
+    }
+</script>
+</html>

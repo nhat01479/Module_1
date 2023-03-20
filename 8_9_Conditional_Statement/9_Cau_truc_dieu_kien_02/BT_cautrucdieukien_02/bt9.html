@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kiểm tra cạnh tam giác</h1>
+    <input type="number" name="" id="a" placeholder="Nhập số a"><br><br>
+    <input type="number" name="" id="b" placeholder="Nhập số b"><br><br>
+    <input type="number" name="" id="c" placeholder="Nhập số c"><br><br>
+    <input type="button" onclick="handleCheck()" value="Kiểm tra"><p id="result"></p>
+</body>
+<script>
+    // let a = Number(prompt('Nhập số a'));
+    // let b = Number(prompt('Nhập số b'));
+    // let c = Number(prompt('Nhập số b'));
+function handleCheck(){
+    let a = parseInt(document.getElementById('a').value);
+    let b = parseInt(document.getElementById('b').value);
+    let c = parseInt(document.getElementById('c').value);
+    let result = '';
+    if (a<=0 || b<=0 || c<=0) result = 'Đây không phải là 3 cạnh của 1 tam giác';
+    else if (a+b>c && b+c>a && a+c>b) result = 'Đây là 3 cạnh của 1 tam giác';
+         else result = 'Đây không phải là 3 cạnh của 1 tam giác';
+    // document.write(`${result}`);
+    document.getElementById('result').innerText = `${result}`;    
+}
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Inline</title>
+</head>
+<body>
+    <h1 style="font-size: 100px;">JS Inline</h1>
+    <h2 id="intro"></h2>
+    <h2>What Can JavaScript Do</h2>
+    <p id="demo">JavaScript can change HTML content.</p>
+    <button 
+    onmouseover='document.getElementById("demo").innerHTML = "Hello JavaScript"'
+    onmouseout='document.getElementById("demo").innerHTML = "JavaScript can change HTML content"'>Click Me!    
+    </button>
+    <!--  Khi rê chuột lên nút "Click me!" thì thay thế nội dung (innerHTML) trong phần tử có ID="demo" của trang HTML thành "Hello JavaScript"
+          Khi rê chuột ra ngoài nút "Click me!" thì thay thế nội dung trong phần tử có ID="demo" của trang HTML thành "JavaScript can change HTML content"
+    -->
+    <button onmouseover="this.innerText=Date()"
+            onmouseout="this.innerText='Xin chào'"
+            onclick="alert('JavaScript')">Hello
+    </button>
+    <!-- Khi rê chuột lên nút "Hello" thì thay thế nội dung InnerText (Hello) thành thông tin ngày giờ
+         Khi rê chuột ra ngoài thì hiện "Xin chào" 
+         Khi click vào thì hiện thông báo "JavaScript"
+    -->
+    <hr>
+    <h2>What  Can JavaScript Do?</h2>
+    <p>JavaSciprt can change HTML attributes.</p>
+    <p>In this case JavaScript changes the src (source) attribute of an image.</p>
+    <img id="light" src="images/pic_bulbon.gif" alt="">
+    <button onclick='document.getElementById("light").src="images/pic_bulboff.gif"'>Turn Off the light
+    </button>
+    <!-- Khi click chuột vào nút "Turn off the light" thì sẽ thay thế src (source) của phần tử có ID="light" thành link khác-->
+    <button onclick='document.getElementById("light").src="images/pic_bulbon.gif"'>Turn On the light
+    </button>
+    <!-- Khi click chuột vào nút "Turn on the light" thì sẽ thay thế src (source) của phần tử có ID="light" thành link khác-->
+
+
+
+</button>
+</body>
+<!-- <script>
+    var intro = "Hello World";
+    document.getElementById("intro").innerHTML= intro;z
+</script> -->
+<script src="index.js"></script>
+</html>

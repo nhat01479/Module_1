@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       td{
+        text-align: center;
+       }
+    #result{
+        border: 1px solid;
+        width: 100px;
+    }
+    #number1, #number2{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <table>
+        <caption><h3>Máy tính đơn giản</h3></caption>
+        <tr>
+            <td><input type="number" id="number1" placeholder="Nhập số a"></td>
+            <td><select name="" id="select">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="x">x</option>
+                <option value="/">/</option>
+                </select></td>
+            <td><input type="number" id="number2" placeholder="Nhập số b"></td>
+            <td>=</td>
+            <td id="result">Result</td>
+        </tr>
+    </table><br>
+    <button onclick="tinhtoan()">Calculator</button>
+</body>
+<script>
+    function tinhtoan(){
+        let number1=document.getElementById('number1').value;
+        let number2=document.getElementById('number2').value;
+        let seLect=document.getElementById('select').value;
+        let nb1=parseInt(number1);
+        let nb2=parseInt(number2);
+        let result;
+        if(seLect=='+'){
+            result=nb1+nb2;
+            document.getElementById('result').innerHTML=result;            
+        }
+        else if(seLect=='-'){
+            result=nb1-nb2;
+            document.getElementById('result').innerHTML=result;            
+        }
+        else if(seLect=='x'){
+            result=nb1*nb2;
+            document.getElementById('result').innerHTML=result;            
+        }
+        else if(seLect=='/'){
+            result=nb1/nb2;
+            document.getElementById('result').innerHTML=result;            
+        }
+        }
+</script>
+</html>

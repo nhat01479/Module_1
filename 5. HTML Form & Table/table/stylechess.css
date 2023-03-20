@@ -1,0 +1,34 @@
+table{
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid #333;    
+}
+td{
+    width:80px;
+    height: 80px;
+}
+th{
+    background-color: orange;
+    width:40px;
+    height: 40px;
+}
+th{
+    border:none !important;
+}
+table>tbody>tr>td:hover{
+    cursor: pointer;
+    background-color: gray !important;
+}
+table>tbody>tr:nth-child(odd)>td:nth-child(even){
+    background-color: black;
+}
+table>tbody>tr:nth-child(odd)>td:nth-child(odd){
+    background-color: white;
+}
+table>tbody>tr:nth-child(even)>td:nth-child(odd){
+    background-color: black;
+}
+table>tbody>tr:nth-child(even)>td:nth-child(even){
+    background-color: white;
+}

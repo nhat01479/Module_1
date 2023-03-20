@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Xếp loại học lực</h1>
+</body>
+<script>
+let dkiemtra = +prompt('Nhập điểm kiểm tra');
+let dgiuaky = +prompt('Nhập điểm thi giữa kỳ');
+let dcuoiky = +prompt('Nhập điểm thi cuối kỳ');
+let dtb = (dkiemtra + dgiuaky*2 + dcuoiky*3)/6
+document.write('Điểm trung bình:' + dtb + '<br>');
+
+document.write('Học lực: ')
+if (dtb>=9 && dtb<=10) 
+    document.write('Xuất sắc');
+else if (dtb>=8 && dtb <9)
+        document.write('Giỏi');
+    else if (dtb>=7 && dtb<8)
+            document.write('Khá');
+        else if (dtb>=5 && dtb<7)
+                document.write('Trung bình');
+             else if (dtb<5 && dtb>=0)
+                     document.write('Yếu');
+                  else document.write('Nhập sai điểm');
+</script>
+</html>

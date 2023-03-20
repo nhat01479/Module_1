@@ -1,0 +1,1 @@
+Note bài trước và sau khi học trên lớp

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kiểm tra một số lớn hơn hay nhỏ hơn 0</h1>
+</body>
+<script>
+    let a = +prompt('Nhập số nguyên bất kỳ',);
+    
+    let b = (a==0) ? 0 : (a>0) ? 1 : (a<0) ? -1 : 'Nan';
+        switch (b){
+            case 1:
+                alert(a + ' lớn hơn 0');
+                break;
+            case -1:
+                alert(a + ' lnhỏ hơn 0');
+                break;
+            case 0:
+                alert(a + ' = 0');
+                break;
+            default:
+                alert('NaN');
+        }
+         
+</script>
+</html>

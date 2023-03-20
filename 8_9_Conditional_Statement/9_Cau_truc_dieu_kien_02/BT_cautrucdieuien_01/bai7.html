@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính cước điện thoại</h1>
+</body>
+<script>
+let minutes = +prompt('Nhập số phút điện thoại');
+const codinh = 25000;
+let tiencuoc;
+if (minutes<0) document.write('Nhập sai');
+    else if (minutes<=50) tiencuoc = 600*minutes;
+         else if (minutes<=200) tiencuoc = (600*50 + (minutes-50)*400);
+              else tiencuoc = (600*50 + 150*400 + (minutes-200)*200);
+let TC = codinh + tiencuoc;            
+document.write(`Tiền cước điện thoại là ${TC}`);
+
+
+
+</script>
+</html>

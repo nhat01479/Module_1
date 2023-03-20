@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .data {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kiếm tra số lớn nhất trong 3 số</h1>
+    <p>Nhập số a</p>
+    <input class="data" type="number" id="numa" /><br />
+    <p>Nhập số b</p>
+    <input class="data" type="number" id="numb" /><br />
+    <p>Nhập số c</p>
+    <input class="data" type="number" id="numc" /><br /><br />
+    <div>
+      <button onclick="maxxx()">Kết quả:</button><br /><br />
+      <p id="maxx"></p>
+    </div>
+  </body>
+  <script>
+    function maxxx() {
+      let a = parseInt(document.getElementById("numa").value);
+      let b = parseInt(document.getElementById("numb").value);
+      let c = parseInt(document.getElementById("numc").value);
+      let result;
+      if (a > b && a > c) result = a;
+      else if (b > c) result = b;
+      else result = c;
+      document.getElementById("maxx").innerHTML = 'Giá trị lớn nhất là ' + result;
+    }
+
+    // var a1 = 9;
+    // var a2 = 8;
+    // var a3 = 19;
+    // if(a1 > a2 && a1 > a3){
+    //     console.log("a1 là max");
+    // }else{
+    //     if(a2 > a1 && a2 > a3){
+    //         console.log("a2 là max");
+    //     }else{
+    //         console.log("a3 là max");
+    //     }
+    // }
+  </script>
+</html>

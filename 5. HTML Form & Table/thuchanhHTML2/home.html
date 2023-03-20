@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành HTML2</title>
+</head>
+<body>
+    <h2 id="toppage">Các thẻ HTML cơ bản</h2>
+        <ol>
+            <li><a href="#headtag">Thẻ tiêu đề</a></a></li>
+            <li><a href="#ptag">Thẻ tạo đoạn văn bản</a></a></li>
+            <li><a href="#atag">Thẻ tạo liên kết</a></li>
+            <li><a href="#imgtag">Thẻ chèn hình ảnh</a></li>
+            <li><a href="#vitag">Thẻ chèn video</a></li>
+            <li><a href="#autag">Thẻ chèn audio</a></li>
+            <li><a href="#listtag">Thẻ tạo danh sách</a></li>
+         </ol>
+            <hr>
+        <h3 id="headtag">Thẻ tiêu đề</h3> 
+            Gồm 6 thẻ từ h1 đến h6
+            <hr>
+        <h3 id="ptag">Thẻ tạo đoạn văn bản</h3>
+            <p>Tĩnh dạ tứ hay Tĩnh dạ tư (Cảm nghĩ trong đêm thanh tĩnh) là một bài thơ thuộc thể thơ Đường luật ngũ ngôn tứ tuyệt của nhà thơ Lý Bạch (701-762), ra đời trong thời Thịnh Đường</p> 
+            <pre>                
+             "Sàng tiền minh nguyệt quang
+
+              Nghi thị địa thượng sương
+
+              Cử đầu vọng minh nguyệt
+
+              Đê đầu tư cố hương."
+            </pre>
+            <hr>
+            <!-- Chú ý 
+                <br>             xuống dòng
+                <hr>             tạo đường gạch ngang phân cách
+                <pre>..</pre>    tạo văn bản với định dạng có sẵn
+            -->
+        <h3 id="atag">Thẻ tạo liên kết</h3>                 <!--TH 1-->
+            <p><a href="page2.html">Xem tiếp ở đây</a></p>  <!--TH 2-->
+            <!-- a  anchor
+                    TH 1: Liên kết trong trang
+                    TH 2: Liên kết giữa các trang webpage(s) trong 1 website
+                    TH 3: Liên kết với một tài nguyên bên ngoài website
+                    TH 4: Chức năng download
+            -->
+            <hr>
+        <h3 id="imgtag">Thẻ chèn hình ảnh</h3>
+
+            <img src="sources/image/ly-ca-phe.jpg" alt="hinh-anh-ly-ca-phe" width="200">
+
+            <br>
+
+            <p>Đây là ảnh kèm link</p>
+
+                <a href="https://www.w3schools.com/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/W3Schools_logo.svg/768px-W3Schools_logo.svg.png" style="width:200px;height:200px;">
+                </a>
+                <br>
+            <p>Đây là bản đồ ảnh (Image map)</p>
+            <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+            
+                <map name="workmap">
+                    <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.w3schools.com/w3images/mac.jpg" target="_blank">
+                    <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.w3schools.com/w3images/cellphone.jpg" target="_blank">
+                    <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://www.w3schools.com/w3images/coffeehouse2.jpg" target="_blank">
+                 </map>
+            <hr>
+
+            <!-- img
+                    src: source ảnh
+                    alt: từ thay thế khi lỗi không hiển thị ảnh
+                    style="float:left(right)": vị chỉnh vị trí ảnh sang trái hoặc phải
+                    map: bản đồ ảnh, chú ý: usemap="#name" - name="name"
+                        rect: hình chữ nhật
+                        circle: hình tròn
+                        poly: đa giác
+            -->
+        <h3 id="vidtag">Thẻ chèn video</h3>
+            
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4">
+            </video>
+        <hr>
+
+        <h3 id="autag">Thẻ chèn audio</h3>
+
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3">
+            </audio>
+            <hr>
+        <h3 id="listtag">Thẻ tạo danh sách</h3>
+        <a href="#toppage">Go to top</a>
+</body>
+</html>
+
+
+

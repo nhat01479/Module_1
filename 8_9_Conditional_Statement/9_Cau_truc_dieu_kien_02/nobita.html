@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- onload="docReady()" Cái này nằm trong <body ....> -->
+<body > 
+    <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position:absolute;left:0; top:0;" height="100" width="80"/>
+</body>
+<script>
+    function UpArrow(){
+        let element = document.getElementById('nobita');        
+        element.style.top = parseInt(element.style.top) + -100 + 'px';
+    }
+    function RightArrow(){
+        let element = document.getElementById('nobita');        
+        element.style.left = parseInt(element.style.left) + 100 + 'px';
+    }
+    function DownArrow(){
+        let element = document.getElementById('nobita');        
+        element.style.top = parseInt(element.style.top) + 100 + 'px';
+    } 
+    function LeftArrow(){
+        let element = document.getElementById('nobita');        
+        element.style.left = parseInt(element.style.left) + -100 + 'px';
+    }                                                                                       // Hàm xử lý khi nhấn phím
+    function moveselection(evt) {                      //Sự kiện nhấn phím sẽ thực thi hàm moveselect(evt) (Sự kiện nhấn phím là "evt")
+        switch (evt.keyCode) {                         //Biểu thức (evt.keyCode)  cho ra key code của phím được nhấn. So sánh với các case phía dưới rồi gọi hàm tương ứng.
+            case 38:                                                //Nếu phím nhấn vào có keyCode = 38 thì gọi hàm UpArrow();
+                UpArrow();
+                break;
+            case 39:                                                //Nếu phím nhấn vào có keyCode = 39 thì gọi hàm RightArrow();
+                RightArrow();
+                break;
+            case 40:                                                //Nếu phím nhấn vào có keyCode = 40 thì gọi hàm DownArrow();
+                DownArrow();
+                break; 
+            case 37:                                                //Nếu phím nhấn vào có keyCode = 37 thì gọi hàm LeftArrow();
+                LeftArrow();
+                break;
+        }
+    }
+    // function docReady() {                                           //Hàm docReady() tự định nghĩa
+    //     window.addEventListener('keydown', moveselection)           //   
+    // }
+    function doReady(){
+        addEventListener('keydown', moveselection)
+    }
+    window.onload = doReady()
+
+</script>
+</html>
