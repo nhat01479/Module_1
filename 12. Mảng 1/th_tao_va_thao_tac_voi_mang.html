@@ -7,14 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text"> 
+    <h1>[Thực hành] Tạo và thao tác với mảng</h1>
+    <input type="text" id="textvalue"> 
     <button type="button" id="add" onclick="add_element_to_array()">Add</button>
     <button type="button" id="display" onclick="display_array()">Display</button>
+    <p id="result"></p>
+    <p id="result1"></p>
 </body>
 <script>
+    var x = 0;
     var arr = []; 
-    function add_element_to_array() {
-
+    function add_element_to_array() {                               // Hàm nhập giá trị của phần tử mảng
+        arr[x] = document.getElementById('textvalue').value;        //x=0 ==> arr[0]
+        alert("Element: " + arr[x] + " Added at index " + x);            
+        x++;
+        document.getElementById('textvalue').value = '';            //Sau khi nhập thì cho value bằng rỗng để nhập tiếp
     }
+    function display_array() {                                      //Hàm hiển thị giá trị phần tử mảng sau khi nhập
+    let e = "<hr/>";
+    for (let i = 0; i < arr.length; i++) {                          //Cho i chạy từ 0 tới arr.length - 1, tương ứng với giá trị của x ở trên
+        e += "Element " + i + " = " + arr[i] + "<br/>";             
+    }
+    document.getElementById("result").innerHTML = e;                //Hiển thị phần tử thứ i của mảng
+    }
+    console.log(arr);
+
+    
+    
 </script>
 </html>
