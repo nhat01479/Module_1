@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Bài 2: Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn. Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.</h3>
+    <p id="output"></p>
+</body>
+<script>
+    let num = +prompt('Nhập vào 1 số');                              // ví dụ nhập vào 246789
+    let str = num.toString();                                        // chuyển số thành chuỗi str = '246789';
+    let result = [str[0]];                                            // tạo mảng result với giá trị str[0] ==> 2
+    for (let i=0; i<str.length-1; i++) {        
+        if ((str[i] % 2 == 0) && (str[i+1] % 2 == 0)) {               // vòng lặp check 2 phần tử liền kề có chia hết cho 2 hay không  
+            result.push('-', str[i+1]);                               // push vào cuối mảng result ký tự '-' và giá trị str[i+1] nếu 2 phần tử liền kề của chuỗi str chia hết cho 2                           
+        }       
+        else result.push(str[i+1]);                                     // push vào mảng result giá trị str[i+1] nếu 2 phần tử trên không đồng thời chia hết cho 2
+    }
+    console.log(result);                                                // Mảng result = ['2', '-', '4', '-', '6', '7', '8', '9']
+    console.log(result.join(''));                                       // 2-4-6789      
+    document.getElementById('output').innerText = result.join('');
+
+
+    
+</script>
+</html>

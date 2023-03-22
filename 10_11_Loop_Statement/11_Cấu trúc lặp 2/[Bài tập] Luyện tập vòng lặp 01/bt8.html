@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Game đoán số</h1>
+    <button type="button" id="'play" onclick="Play()">Chơi</button>
+</body>
+<script>
+function Play() {
+    let a = +prompt('Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?');
+    let rnd = Math.ceil(Math.random()*a);
+    let num = +prompt('Nhập số bạn đoán');
+    let result;
+    let count = 0;
+    for (i=1; i<4; i++) {
+        if (num > rnd) {
+            alert('Số bạn đoán lớn hơn');
+            num = +prompt('Nhập số bạn đoán');
+        }    
+        else if (num < rnd) {
+            alert('Số bạn đoán bé hơn');
+            num = +prompt('Nhập số bạn đoán');
+        }
+        if (num == rnd) {
+            alert('Chúc mừng');;
+            break;
+        }
+        count++
+        if (count == 3) {
+            alert('Rất tiếc, bạn đã hết lượt chơi');
+        }
+    }
+}
+</script>
+</html>
