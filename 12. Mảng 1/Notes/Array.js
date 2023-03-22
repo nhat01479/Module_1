@@ -177,7 +177,7 @@ var languages = [
     console.log(languages.slice(-2, -1))  //['PHP']
 
 
-// Đảo ngược mảng
-    var a = [1,2,3];
-    a.reverse();
-    console.log(a); //[3, 2, 1]
+// // Đảo ngược mảng
+//     var a = [1,2,3];
+//     a.reverse();
+//     console.log(a); //[3, 2, 1]
