@@ -25,7 +25,7 @@ function courseHandler(course, index) {         // trả về cái gì thì mả
     }
 
 }
-
+                                                //courseHandler gọi là hàm callback
 var newCourses = course.map(courseHandler);      //map() sẽ duyệt qua từng phần tử của mảng course  
                                                 //khi duyệt qua mỗi phần tử sẽ gọi hàm đã truyền vào map()
 console.log(newCourses);                        //trả về 1 mảng gồm 3 phần tủ
