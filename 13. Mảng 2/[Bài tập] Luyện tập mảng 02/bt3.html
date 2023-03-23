@@ -17,7 +17,7 @@
 for (let i = 0; i < 5; i++) {
   let randomNumber = Math.floor(Math.random() * 26) + 97; // Tạo ra số ngẫu nhiên từ 97 đến 122 tương ứng với các ký tự từ a đến z
   let randomChar = String.fromCharCode(randomNumber); // Chuyển đổi số thành ký tự
-  array.push(randomChar,randomNumber); // Thêm ký tự vào mảng
+  array.push(randomChar,(randomNumber-97)); // Thêm ký tự vào mảng
 }
 document.write(array + '<br>'); // In ra mảng ký tự ngẫu nhiên
 let count = 0;
