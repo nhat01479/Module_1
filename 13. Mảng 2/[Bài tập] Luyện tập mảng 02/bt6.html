@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>Bài 6: Viết chương trình nhập vào một mảng 
+        ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )</pre>
+</body>
+<script>
+     let array = [];       
+
+for (let i = 0; i < 5; i++) {
+  let randomNumber = Math.floor(Math.random() * 26) + 97; 
+  let randomChar = String.fromCharCode(randomNumber); 
+  array.push(randomChar,'-'); 
+}
+document.write(array + '<br>') ;
+console.log(array);
+for (i=0; i<array.length; i++) {
+    if (array[i] == '-') {
+        array[i] = '_';
+    }
+}
+document.write(array);
+console.log(array);
+</script>
+</html>
