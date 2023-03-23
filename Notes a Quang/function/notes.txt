@@ -22,7 +22,7 @@
         printMultiple("Hello")
 
         + bắt đầu động từ, sau sau là danh từ 
-        
+
         + theo quy tắc lạc đà
 
 ### Thứ tự truyền đối số
@@ -35,6 +35,8 @@
 ### Hãy nói về tham số và gọi hàm đi
 
         Tham số: parameter: các biến được khai báo trong định nghĩa của hàm để nhận giá trị của các đối số
+
+        Gọi hàm bằng cách gọi tên hàm sau đó truyền vào các tham số cần thiết
 
 ### let với var khác nhau ở đâu, có mấy điểm chính
 
@@ -63,13 +65,15 @@
 
 ### Các bước để viết một hàm
 
+        keyword: function
+
         Đặt tên hàm 
 
         Truyền vào tham số (parameters)
 
         Viết các câu lệnh
 
-        Trả về: cái gì?
+        Trả về: return trả về kết quả để sử dụng tiếp ở bên ngoài
 
 ### Đối số và tham số
 
