@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi</h3>
+  </body>
+  <script>
+    let array = Array(10);
+
+    let result;
+    for (i = 0; i < array.length; i++) {
+      array[i] = Math.ceil(Math.random() * 100 + Math.random() * -100);
+    }
+      let count = 0;
+      for (j = 0; j < array.length; j++) {
+        if (array[j] < 0) {
+          count++;
+        }
+      }
+      if (count == 0) {
+        result = "Không có số nào nhỏ hơn 0";
+      } 
+      else {
+        result = `Có ${count} số nguyên âm trong mảng ${array}`;
+      }
+    
+    document.write(result);
+  </script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre> Bài 4: Viết một chương trình để đếm số từ trong một chuỗi
+         </pre>
+</body>
+<script>
+    // let a = Array (10);
+    let array = [];       
+
+for (let i = 0; i < 5; i++) {
+  let randomNumber = Math.floor(Math.random() * 26) + 97; // Tạo ra số ngẫu nhiên từ 97 đến 122 tương ứng với các ký tự từ a đến z
+  let randomChar = String.fromCharCode(randomNumber); // Chuyển đổi số thành ký tự
+  array.push(randomChar,randomNumber); // Thêm ký tự vào mảng
+}
+document.write(array + '<br>'); // In ra mảng ký tự ngẫu nhiên
+let count = 0;
+for (j=0; j<array.length; j++) {
+    if (typeof(array[j]) == 'number') {
+        count++
+    }
+}
+document.write(`Số ký tự số trong mảng là ${count}`)
+
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Bài 2- Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.</h3>
+</body>
+<script>
+    let array = [];
+    let max;
+    for (i=0; i<10; i++) {
+        let rnd_Num = Math.ceil(Math.random()*100);         // tạo 1 số ngẫu nhiên
+        if (array.indexOf(rnd_Num) === -1) {                // kiểm tra số này đã có trong mảng chưa;
+            array.push(rnd_Num);                            // hàm indexOf trả về -1 nghĩa là chưa có
+        } 
+        max = array[0];                                                  // thêm vào mảng phần tử rnd_Num   
+        for (j=0; j<10; j++) {                
+            if (array[j] > max) {
+                max = array[j];
+            }
+        } 
+    }
+    document.write(`Số lớn nhất trong mảng ${array} là ${max}`);
+</script>
+</html>

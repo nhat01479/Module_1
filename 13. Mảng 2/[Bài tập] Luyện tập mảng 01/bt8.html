@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre><h3>
+        Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên 
+        gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần 
+        và hiển thị ra mảng đã được sắp xếp.
+    </h3></pre>
+  </body>
+  <script>
+    // let array = Array(10);
+    // let max;
+    // let brr = [];
+    // for (i=0; i<array.length; i++) {
+    //     array[i] = Math.ceil(Math.random()*10);
+    // }
+    // document.write(array);
+
+    // for (i=0; i<array.length; i++){
+    // max = array[0];
+    // for (j=0; j<array.length - i; j++) {
+    //     if (array[j] > max ) {
+    //         max = array[j];
+    //         index = j;
+    //         // console.log(max);
+    //     }
+    // }
+    // var temp = array[i];
+    // array[i] = array[index];
+    // array[index] = temp;
+    // }
+    // console.log(max);
+    // console.log(array[index]);
+    //------------------------------------------------------------------
+
+    // let array = Array(10);
+    // for (i = 0; i < array.length; i++) {
+    //   array[i] = Math.ceil(Math.random() * 10);
+    // }
+    // document.write(array + '<br>')
+    // for (let i = 0; i < array.length; i++) {
+    //   for (let j = 0; j < i; j++) {
+    //     if (array[i] > array[j]) {
+    //       let temp = array[i];
+    //       array[i] = array[j];
+    //       array[j] = temp;
+    //     }
+    //   }
+    // }
+    // document.write(`Sắp xếp mảng từ lớn tới bé </br> ${array} </br>`);
+
+    //-----------------------------------------------------------------------
+
+    let array = Array(10);
+    for (i = 0; i < array.length; i++) {
+      array[i] = Math.ceil(Math.random() * 10);
+    }
+    document.write(array + '<br>')
+    // array.sort(function(a, b) {
+    //     return b - a;
+    // }
+    // )
+    array.sort(function(a, b) {
+        return a - b;
+    }
+    )
+    document.write(array);
+  </script>
+</html>
