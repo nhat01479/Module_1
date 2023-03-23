@@ -55,21 +55,24 @@
     // }
     // document.write(`Sắp xếp mảng từ lớn tới bé </br> ${array} </br>`);
 
-    //-----------------------------------------------------------------------
+    //--------------------------Hàm sort---------------------------------------------
 
     let array = Array(10);
     for (i = 0; i < array.length; i++) {
       array[i] = Math.ceil(Math.random() * 10);
     }
-    document.write(array + '<br>')
+    // document.write(array + '<br>')
+    // // array.sort(function(a, b) {
+    // //     return b - a;
+    // // }
+    // // )
     // array.sort(function(a, b) {
-    //     return b - a;
+    //     return a - b;
     // }
     // )
-    array.sort(function(a, b) {
-        return a - b;
-    }
-    )
-    document.write(array);
+    // document.write(array);
+    document.write(array + '<br>');
+    array.sort();
+    document.write(array.sort());
   </script>
 </html>

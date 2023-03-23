@@ -1,0 +1,39 @@
+### Biến toàn cục:
+//----------------Biến toàn cục và biến cục bộ
+let total = 0;              // toàn cục
+function sum(start, end){       
+    let total = 0;          // cục bộ
+    for(let i=start;i<=end;i++){
+        total += i;
+    }
+    return total;         
+}
+sum(1,3);
+
+### Biến cục bộ
+
+
+### Quy tắc đặt tên hàm
+printMultiple("Hello")
++ bắt đầu động từ, sau sau là danh từ 
++ theo quy tắc lạc đà
+
+### Thứ tự truyền đối số
+
+
+### Hãy nói về return đi
+
+
+### Hãy nói về tham số và gọi hàm đi
+
+
+### let với var khác nhau ở đâu, có mấy điểm chính
+
+
+### Truyền tham trị là như thế nào?
+
+
+### Truyền tham chiếu là như thế nào?
+
+
+### Các bước để viết một hàm
