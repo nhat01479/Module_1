@@ -1,39 +1,80 @@
 ### Biến toàn cục:
-//----------------Biến toàn cục và biến cục bộ
-let total = 0;              // toàn cục
-function sum(start, end){       
-    let total = 0;          // cục bộ
-    for(let i=start;i<=end;i++){
-        total += i;
-    }
-    return total;         
-}
-sum(1,3);
+        //----------------Biến toàn cục và biến cục bộ
+        let total = 0;              // toàn cục: được khai báo bên ngoài hàm, được sử dụng bởi bất kỳ hàm nào
+        function sum(start, end){       
+            let total = 0;          // cục bộ nằm trong hàm
+
+            for(let i=start;i<=end;i++){
+                total += i;
+            }
+            return total;         
+        }
+        sum(1,3);
 
 ### Biến cục bộ
 
+        Được khai báo bên trong hàm, vòng lặp hoặc câu lệnh điều kiện
+
+        
 
 ### Quy tắc đặt tên hàm
-printMultiple("Hello")
-+ bắt đầu động từ, sau sau là danh từ 
-+ theo quy tắc lạc đà
+
+        printMultiple("Hello")
+
+        + bắt đầu động từ, sau sau là danh từ 
+        
+        + theo quy tắc lạc đà
 
 ### Thứ tự truyền đối số
 
 
 ### Hãy nói về return đi
 
+        Trả về giá trị, có thể có hoặc không
 
 ### Hãy nói về tham số và gọi hàm đi
 
+        Tham số: parameter: các biến được khai báo trong định nghĩa của hàm để nhận giá trị của các đối số
 
 ### let với var khác nhau ở đâu, có mấy điểm chính
+
+        let không cho khai báo lại
+
+        var cho khai báo lại
+
+        Khai báo var trong blockcode ({})  thì nó hoisting - trồi lên và có thể sử dụng ở bên ngoài
+
+        Khai báo let trong blockcode thì chỉ có phạm vi trong đó thôi
 
 
 ### Truyền tham trị là như thế nào?
 
+        Truyền giá trị - pass by value
+
+        Các kiểu dữ liệu nguyên thủy: số, boolean, string
+
+        Thay đổi giá trị bên trong hàm vẫn không ảnh hưởng đến giá trị bên ngoài.
 
 ### Truyền tham chiếu là như thế nào?
 
+        Truyền vào kiểu mảng, đối tượng
+
+        Thay đổi giá trị bên trong hàm vẫn sẽ ảnh hưởng đến giá trị bên ngoài.
 
 ### Các bước để viết một hàm
+
+        Đặt tên hàm 
+
+        Truyền vào tham số (parameters)
+
+        Viết các câu lệnh
+
+        Trả về: cái gì?
+
+### Đối số và tham số
+
+        Đối số là giá trị được truyền vào cho một hàm khi nó được gọi, còn tham số là các biến được khai báo trong định nghĩa của hàm để nhận giá trị của các đối số.
+
+        parameter: tham số
+
+        arguments: đối số

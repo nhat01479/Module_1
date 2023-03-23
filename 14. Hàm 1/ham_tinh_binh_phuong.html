@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
-<script>
-    function calSquare(num) {
-        var result = num*num
-        return result;
+    <style>
+      #input {
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    Bình phương của <input id="input" type="number" oninput="calSquare()" /> là:
+    <span id="result"></span>
+  </body>
+  <script>
+    // function calSquare(num) {
+    //     var result = num*num
+    //     return result;
+    // }
+    // var square = calSquare()
+    // document.write(square + '<br>')
+    // document.write(`Bình phương của 2 là ${calSquare(2)}<br>`)
+    // document.write(`Bình phương của 5 là ${calSquare(5)}`)
+
+    function Square(num) {
+      var result = num * num;
+      return result;
     }
-    var square = calSquare(10);
-    console.log(square);
-</script>
+    function calSquare() {
+      var input = document.querySelector("#input").value;
+      result = Square(input);
+      document.querySelector("#result").innerHTML = result;
+    }
+  </script>
 </html>

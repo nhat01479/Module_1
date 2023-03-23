@@ -9,4 +9,24 @@
 <body>
     
 </body>
+<!-- <script src="func.js"></script> -->
+<script>
+    // function sum(a,b) {
+    //     return a+b;
+    // }
+    // var total = sum(20,30);
+    // document.write(total)
+
+//-------------------------------------------------------------------
+
+    function calSum(start, end) {
+        var sum = 0;
+        for (i=start; i<=end; i++) {
+            sum += i;
+        }
+        return sum;
+    }
+    var result = calSum(1,10)
+    document.write(`Tổng các số từ 1 tới 10 là ${result}`)
+</script>
 </html>

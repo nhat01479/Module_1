@@ -13,18 +13,28 @@
     </pre>
 </body>
 <script>
-  let a = [
-    [1, 2, 1, 24],
-    [8, 11, 9, 4],
-    [7, 0, 7, 27],
-    [7, 4, 28, 14],
-    [3, 10, 26, 7]
-];
-for (i=0; i<a.length; i++) {
-    document.write('row ' + i + '<br>');
-    for (j=0; j<a[i].length; j++) {
-        document.write(a[i][j] + '<br>')
+//   let a = [
+//     [1, 2, 1, 24],
+//     [8, 11, 9, 4],
+//     [7, 0, 7, 27],
+//     [7, 4, 28, 14],
+//     [3, 10, 26, 7]
+// ];
+// for (i=0; i<a.length; i++) {
+//     document.write('row ' + i + '<br>');
+//     for (j=0; j<a[i].length; j++) {
+//         document.write(a[i][j] + '<br>')
+//     }
+// }
+let a = Array(5);                                                   // Khai báo mảng 2 chiều: a
+for (i=0; i<a.length; i++) {                                    
+    a[i] = Array(4);                                                 // Khai báo mảng a[i] là 1 mảng thuộc mảng a
+    for (j=0; j<a[i].length ; j++) {                                //chú ý chỗ này j<a[i].length
+        a[i][j] = Math.floor(Math.random()*100);                    //Gán giá trị cho các phần tử của mảng
     }
 }
+// document.write(`Mảng a = [<br>[${a[0]}],<br>[${a[1]}],<br>[${a[2]}],<br>[${a[3]}]<br>]`)
+console.log(a);
+
 </script>
 </html>
