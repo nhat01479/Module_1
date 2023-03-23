@@ -1,7 +1,9 @@
+
+
 // Viết hàm tìm số lớn nhất trong mảng
 /**
  Tên hàm: findMaxInArray
- Tham số: mảng các số
+ Tham số (parameters): mảng các số
  Trả về: số lớn nhất
  */
 
@@ -15,7 +17,7 @@
     return max;
  }
 
- let arr = [4,7,9,1];
+ let arr = [4,7,9,1,12];
  let max = findMaxInArray(arr);
 
  console.log(max);
