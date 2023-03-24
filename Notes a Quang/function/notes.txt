@@ -59,7 +59,7 @@
 
 ### Truyền tham chiếu là như thế nào?
 
-        Truyền vào kiểu mảng, đối tượng
+        Truyền vào kiểu mảng, đối tượng, hàm
 
         Thay đổi giá trị bên trong hàm vẫn sẽ ảnh hưởng đến giá trị bên ngoài.
 
