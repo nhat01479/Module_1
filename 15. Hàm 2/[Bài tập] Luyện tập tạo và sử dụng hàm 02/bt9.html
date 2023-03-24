@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>
+      Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra
+      xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất
+      hiện của ký tự đó, nếu không trả về -1.
+    </h3>
+  </body>
+  <script>
+    var char = prompt("Nhập ký tự bất kỳ");
+    var a = [];
+    for (i = 0; i < 50; i++) {
+      let rnd = Math.floor(Math.random() * 26 + 97);
+      let char = String.fromCharCode(rnd);
+      a.push(char);
+    }
+    document.write(a + "<br>");
+
+
+    function checkIndex(array, character) {
+      var count = 0;   
+      
+      for (i = 0; i < array.length; i++) {
+        if (array.indexOf(character) == -1) {
+          count = -1;      
+          break;    
+        }
+        if (character == array[i]) {
+            count++;
+          }
+        }
+      return count;
+    }
+
+    document.write(checkIndex(a, char));
+  </script>
+</html>

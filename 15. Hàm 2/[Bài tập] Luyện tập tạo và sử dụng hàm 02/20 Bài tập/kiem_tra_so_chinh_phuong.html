@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function checkPerfectSquare(a) {
+        if (Math.sqrt(a) % 1 == 0) return result = `${a} là số chính phương`;
+        else return result = `${a} không phải số chính phương`;
+    }
+    let num = +prompt('Nhập vào 1 số');
+    let check = checkPerfectSquare(num);
+    document.write(result);
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+
+    </h3>
+</body>
+<script>
+    var a = Array(10);
+    for (i=0; i<a.length; i++) {
+        a[i] = Math.floor(Math.random()*100);
+    }
+    document.write(a + '<br>');
+    function reverseArray(array) {
+        for (i=0; i<a.length/2; i++) {
+            temp = a[i];
+            a[i] = a[a.length - 1 - i];
+            a[a.length - 1 - i] = temp;
+        }
+        return array;
+    }
+    document.write(reverseArray(a))
+</script>
+</html>
