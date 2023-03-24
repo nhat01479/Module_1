@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td {
+            border: 1px solid;  
+            border-collapse: collapse;                        
+        }
+        td {
+            border-collapse: collapse;
+            width: 60px;
+            text-align: center;
+        }
+        input {
+            width: 60px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Feets</td>
+            <td><input type="number" id="inputF" oninput="feetTometers()" onchange="feetTometers()"></td>
+            <td>=</td>
+            <td id="outputM"></td>
+            <td>Meters</td>
+        </tr>
+        <tr>
+            <td>Meters</td>
+            <td><input type="number" id="inputM" oninput="metersTofeet()" onchange="metersTofeet()"></td>
+            <td>=</td>
+            <td id="outputF"></td>
+            <td>Feets</td>
+        </tr>
+    </table>
+    
+</body>
+<script>
+    function FtoM(feet) {
+        var meter = 0.305 * feet;
+        return meter;
+    }
+
+    function MtoF(meter) {
+        var feet = 3.279 * meter;
+        return feet;    
+    }
+
+    function feetTometers() {
+        var F = document.getElementById('inputF').value;
+        M = FtoM(F)
+        return document.getElementById('outputM').innerText = M;;
+    }
+   
+    function metersTofeet() {
+        var M = document.getElementById('inputM').value;
+        F = MtoF(M);
+        return document.getElementById('outputF').innerText = F;
+    }
+</script>
+</html>

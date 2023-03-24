@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Fahrenheit: </label>
+    <input type="number" id="inputF" placeholder="Nhập độ F" oninput="convertFtoC()">  <!--oninput="convertFtoC(this.value)" -->
+    <br>
+    <label>Celcius: <span id="outputC"></span></label>
+</body>
+<script>
+    function FtoC(f) {
+        var C = (f - 32)*5/9;
+        return C;
+    }
+
+    function convertFtoC() {
+        var input = document.getElementById('inputF').value;
+        C = FtoC(input);
+        document.getElementById('outputC').innerHTML = C;
+    }
+
+//----------------Như trên nhưng bằng cách khác---------------------------------------------------------------
+
+    // function convertFtoC(F) {
+    //     F = parseFloat(F);
+    //     document.getElementById("outputC").innerHTML = (F-32) / 1.8;
+    // }
+</script>
+</html>

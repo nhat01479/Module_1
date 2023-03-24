@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+// Xây dựng hàm
+
+    function findMin(arr) {
+      let min = arr[0];
+      for (j = 1; j < arr.length; j++) {
+        if (arr[j] < min) {
+          min = arr[j];
+        }
+      }
+      return min;
+    }
+
+// Sử dụng hàm cho mảng array
+
+    let array = Array(5);    
+    for (i = 0; i < array.length; i++) {
+      array[i] = Math.ceil(Math.random() * 100);
+    }
+    console.log(array);
+    let min = findMin(array);
+    console.log(min);
+
+
+
+    //     let min = array[0];
+    //     for (j=1; j<array.length; j++) {
+    //         if (array[j] < min) {
+    //             min = array[j];
+    //         }
+    //     }
+    // console.log(array);
+    // console.log(min);
+  </script>
+</html>

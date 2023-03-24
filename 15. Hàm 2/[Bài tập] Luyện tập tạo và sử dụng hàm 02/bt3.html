@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Giai thừa</h3>
+</body>
+<script>
+    function calFactorial(num) {
+        var result = 1;
+        for (i=1; i<=num; i++) {
+            result = result * i;
+        }
+        return result;
+    }
+
+    let n = +prompt('Nhập số muốn tính giai thừa')
+    let result = calFactorial(n);
+    document.write(`${n}! = ${result}`);
+</script>
+</html>

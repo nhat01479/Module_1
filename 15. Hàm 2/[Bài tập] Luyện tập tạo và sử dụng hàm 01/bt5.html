@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let str = prompt('Nhập tên ngôi sao');  
+
+// //Tạo hàm
+
+//     function addString(string) {
+//         var result;
+//         for (i=0; i<a.length; i++) {
+//             if (string == a[i]) {
+//               result = `${string} thuộc chòm sao ${b[i]}`;
+//               break;
+//             }
+//             else result = `${string} không thuộc chòm thuộc chòm sao nào`;
+//         }
+//         return result;       
+//     }
+
+// //Gọi hàm
+
+//     document.write(addString(str));
+
+//-----------------Như trên nhưng cách khác--------------------------------------------------
+
+// let vitri = a.findIndex(function(value,position,a){              //let vitri = a.findIndex(a => a == name);
+//             return a[position] == str;                           //document.write(b[vitri]);
+//         });
+//         document.write(b[vitri]);
+
+//-----------------Như trên nhưng cách khác--------------------------------------------------
+
+let index = a.indexOf(str);
+if (index == -1) document.write(`${str} không thuộc chòm sao nào`);
+else document.write(`${str} thuộc chòm sao ${b[index]}`)
+
+  
+
+</script>
+</html>
