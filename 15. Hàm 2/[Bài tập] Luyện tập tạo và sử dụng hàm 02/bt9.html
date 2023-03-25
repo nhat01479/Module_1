@@ -23,19 +23,16 @@
     }
     document.write(a + "<br>");
 
-
     function checkIndex(array, character) {
-      var count = 0;   
-      
+      var count = 0;
+      if (array.indexOf(character) == -1) {
+        count = -1;
+      }
       for (i = 0; i < array.length; i++) {
-        if (array.indexOf(character) == -1) {
-          count = -1;      
-          break;    
-        }
         if (character == array[i]) {
-            count++;
-          }
+          count++;
         }
+      }
       return count;
     }
 

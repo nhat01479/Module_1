@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+// for (i=0; i<a.length; i++) {       
+//     for (j=0; j<a[i].length; j++) {
+//         var i1 = parseInt((Math.random()*a.length))
+//         var j1 = parseInt((Math.random()*a[i].length))
+//         var temp = a[i][j];
+//         a[i][j] = a[i1][j1];
+//         a[i1][j1] = temp
+//     }
+// } 
+// console.log(a);
+
+function turnOn(machine) {
+    machine.isOn = true;
+}
+let computer = {
+    isOn: false
+}; 
+turnOn(computer);
+console.log(computer.isOn);
+
+</script>
+</html>

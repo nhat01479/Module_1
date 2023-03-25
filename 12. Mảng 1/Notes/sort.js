@@ -29,6 +29,6 @@ dương có nghĩa là phần tử đầu lớn hơn phần tử sau
 
 //Hàm đảo ngược mảng
 
-let arr = ["Toyota", "Subaru", "BMW"]
-document.write(arr.sort() + "<br>") 
-document.write(arr.reverse()) 
+// let arr = ["Toyota", "Subaru", "BMW"]
+// document.write(arr.sort() + "<br>") 
+// document.write(arr.reverse()) 

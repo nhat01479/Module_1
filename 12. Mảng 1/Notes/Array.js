@@ -187,10 +187,10 @@
 // Lấy ra vị trí của ký tự trong chuỗi và vị trí của phần tử trong mảng
 // trả về -1 nếu giá trị không được tìm thấy
 
-    var str = 'language';
-    var index = str.indexOf('g');
-    console.log(index);       //3
+    // var str = 'language';
+    // var index = str.indexOf('g');
+    // console.log(index);       //3
 
-    var num = [1,3,5,5,9];
-    var a = num.indexOf(5);     // trả về vị trí của lần xuất hiện đầu tiên
-    console.log(a);             //2
+    // var num = [1,3,5,5,9];
+    // var a = num.indexOf(5);     // trả về vị trí của lần xuất hiện đầu tiên
+    // console.log(a);             //2

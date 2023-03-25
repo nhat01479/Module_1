@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: red;
+        }
+        .titleDisc{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titleDisc" >Từ điển Lạc Việt</h1>
+    <div>
+        <input type="text" id="txtSearch" >
+        <input type="button" value="Dịch" onclick="handleTranslate()">
+    </div>
+    
+    <label for="" id="lbResult"></label>
+
+    <script>
+        let englishes = ["hello", "apple", "love", "orange"];
+        let vietnamese = ["Xin chào", "Quả táo", "Yêu", "Cam"];
+
+        function handleTranslate(){
+            // let txtSearch = document.querySelector("#txtSearch").value;
+            let txtSearch = document.getElementById("txtSearch").value;
+
+            let index = -1;     // mặc định -1 là ko tìm thấy
+            for(let i=0;i<englishes.length;i++){
+                if(englishes[i].toUpperCase()== txtSearch.toUpperCase()){
+                    index = i;
+                    break;
+                }
+            }
+            let result;
+            if(index!=-1){
+                result = vietnamese[index];
+            }else{
+                result = "Không tìm thấy"
+            }
+            document.getElementById("lbResult").innerText = result;
+
+
+        }
+
+    </script>
+</body>
+</html>

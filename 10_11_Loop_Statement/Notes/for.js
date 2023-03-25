@@ -53,7 +53,7 @@
 // document.write(text);
 //___________________________________________________________________________
 
-//coninue;          bỏ qua phần còn lại của vòng lặp để thực hiện lần lặp tiếp theo
+//continue;          bỏ qua phần còn lại của vòng lặp để thực hiện lần lặp tiếp theo
 
 // var text = '';
 // for (var i = 0; i < 5; i++) {
@@ -77,20 +77,20 @@
 // }
 
 
-// var myString = 'Javascript';
+
 // var language = 'Javascript';
 // for (var key in language){
 //     console.log(key);               //lấy ra dạng số của chuỗi
-//     console.log(language[key]);     //lấy ra từng chữ của chuỗi
+// //     console.log(language[key]);     //lấy ra từng chữ của chuỗi
 // }
 
 
 //for/of________________________________________________________________
 
-var language = 'Javascript';          //value: biến tự đặt
-for (var key of language){          //lấy từng ký tự của chuỗi
-    console.log(key);
-}
+// var language = 'Javascript';          //value: biến tự đặt
+// for (var key of language){          //lấy từng ký tự của chuỗi
+//     console.log(key);
+// }
 
 // var languages = [
 //     'Javascript',
@@ -124,6 +124,20 @@ for (var key of language){          //lấy từng ký tự của chuỗi
 // function do_something(animal){           //Như trên nhưng = cách khác
 //     console.log(animal);
 // }
+
+//------------------------------------------------
+
+// var numbers = [1, 2, 3, 4, 5];
+// // numbers.forEach(function(number) {
+// //     console.log(number);
+// // });
+// numbers.forEach(myFunction)
+// function myFunction(number) {
+//     console.log(number);
+// }
+
+//---------------------------------------------------
+
 
 // let sum = "";
 
