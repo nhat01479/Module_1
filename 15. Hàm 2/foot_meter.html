@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convert Foot to Meter</title>
-</head>
-
-<body>
-    <input type="number" id="value" onchange="convert()">
-    <br>
-    <select id="change" onchange="convert()">
-        <option value="1">Convert Foot to Meter</option>
-        <option value="2">Convert Meter to Foot</option>
-    </select>
-    <br>
-    <input type="text" id="result">
-    <script>
-        function convert() {
-            let select = document.getElementById('change');
-            let value = +document.getElementById('value').value;
-            if (select.value == 1) {
-                document.getElementById('result').value = 0.305 * value;
-            }
-            else{
-                document.getElementById('result').value = 3.279 * value;
-            }
+    <title>Document</title>
+    <style>
+        input {
+            width: 103px;
         }
-    </script>
+    </style>
+</head>
+<body>
+    <input type="number" id="input" onchange="convert()"><br>
+    <select name="" id="convert" onchange="convert()">
+        <option value="MtoF">Meters to Foot</option>
+        <option value="FtoM">Foot to Meters</option>
+    </select><br>
+    <input type="text" id="output">
 </body>
+<script>
+   function convert(){
+    let select = document.getElementById('input').value
+    let value = document.getElementById('convert').value
+    if (value == 'MtoF') {
+        document.getElementById('output').value = select * 3.279;
+    }
+    else {
+        document.getElementById('output').value = select * 0.305;
+    }
+   }
 
+</script>
 </html>

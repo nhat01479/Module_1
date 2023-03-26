@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Bài 9: Đếm số nguyên tố trong mảng</h3>
+  </body>
+  <script>
+    let a = Array(10);
+    for (i = 0; i < a.length; i++) {
+      a[i] = Math.floor(Math.random() * 10);
+    }
+/*
+    function isPrimeNumbers(num) {
+        let count = 0;
+        if (num<2) count = 0;
+        for (let i=1; i<=num; i++){
+            if (num % i == 0) count++;
+        }
+        if (count == 2) return true;
+        else return false
+    }
+*/
+    function isPrimeNumbers(num) {
+        let check = true;
+        if (num<2) check = false;
+        for (let i=2; i<num-1; i++){
+            if (num % i == 0) {
+                check = false;
+                break;
+            }           
+        }
+        return check;
+    }
+
+    function countPrimeNumbers(numbers){
+        let result = 0;
+        for (let i=0; i<numbers.length; i++){
+            if (isPrimeNumbers(numbers[i])) result++;
+        }
+        return result
+    }
+
+
+    document.write((a) + '<br>' )
+    document.write(countPrimeNumbers(a))
+  </script>
+</html>

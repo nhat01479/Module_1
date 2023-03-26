@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Bài 16: Kiểm tra ma trận có tồn tại số lẻ hay không</h3>
+  </body>
+  <script>
+    let a = [
+      [0, 36],
+      [6, 36],
+      [60, 36],
+    ];
+
+    function checkOddArray(arr) {
+      let result = "Ma trận không tồn tại số lẻ";
+      for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a[i].length; j++) {
+          if (arr[i][j] % 2 != 0) {
+            result = "Ma trận tồn tại số lẻ";
+          }
+        }
+      }
+      return result;
+    }
+    
+    document.write(checkOddArray(a))
+
+    /* Đếm số lẻ trong ma trận
+     function checkOddArray(arr) {
+      let count=0;
+      for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < a[i].length; j++) {
+          if (arr[i][j] % 2 != 0) {
+            count++;
+
+          }
+        }
+      }
+      return count;
+    }    
+    document.write(checkOddArray(a))
+    */
+
+/* Dùng 2 function
+
+    function checkOdd(num){
+        let check = true;
+        if (num % 2 == 0) check = false;
+        return check;
+    }
+
+    function checkOddArray(arr){
+        let result = 'Ma trận không tồn tại số lẻ';
+        for (let i = 0; i < a.length; i++) {
+            for (let j = 0; j < a[i].length; j++) {
+                if (checkOdd(arr[i][j])){
+                    result = 'Ma trận tồn tại số lẻ';
+                } 
+            }
+        }
+        return result;
+    }
+    document.write(checkOddArray(a))
+*/
+  </script>
+</html>

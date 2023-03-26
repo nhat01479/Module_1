@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Caro Game Simple</h3> 
+    <p id="caro"></p>
+    <input type="button" value="Change Value" onclick="changevalue()">
+</body>
+<script>
+    let b = document.getElementById('caro');
+    let board = Array(5);
+    let data = '';
+    for (let i = 0; i < board.length; i++){         /* Tạo mảng 2 chiều board gồm 5 dòng và 5 cột có giá trị 0*/ 
+        board[i] = Array(0,0,0,0,0);
+    }
+    
+    for (let i = 0; i < board.length; i++) {            // Tạo chuỗi data chứa dữ liệu của mảng board để hiển thị bàn cờ ra màn hình  
+        data += '<br>';                                 // &nbsp; là ký tự dấu cách
+        for (let j = 0; j < board[i].length; j++) {     // Vòng lặp: mỗi lần lặp sẽ tạo ra 1 số 0 và 2 dấu cách, cứ 5 số 0 sẽ có 1 thẻ <br> để xuống dòng
+            data += board[i][j] + '&nbsp;&nbsp;';       
+        }
+    }
+    data += '<br><br>' ;
+    b.innerHTML = data;                                 // Hiển thị bàn cờ ở thẻ <p> có id='caro'
+
+    function changevalue(){
+        let positionX = prompt('X');
+        let positionY = prompt('Y');
+        data = '';                                      //Khi click sẽ xóa data ở trên, đặt lại data = rỗng
+        board[positionX][positionY] = 'x';              //Đổi vị trí board[X][Y] thành X  
+        for (let i = 0; i<board.length; i++){           //Khỏi tạo lại chuỗi data và đưa bàn cờ ra màn hình
+            data += '<br>';
+            for (let j = 0; j < board[i].length; j++){
+                data += board[i][j] + '&nbsp;&nbsp;'
+            }
+        }
+        data += '<br><br>';
+        b.innerHTML =  data;
+    }
+    
+</script>
+</html>

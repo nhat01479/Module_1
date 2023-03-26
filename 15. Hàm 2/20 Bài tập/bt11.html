@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Bài 11: Kiểm tra mảng có đối xứng không? Có trả về 1, không có trả về 0
+    </h3>
+</body>
+<script>
+ let a = ['1','m','n','m',1];
+
+ function checkSymmetric(arr) {
+    let result = 1;
+    for (let i=0; i<arr.length/2; i++){
+        if (arr[i] !== arr[arr.length - 1 -i]) {
+            result = 0;
+            break;
+        }
+    }
+    return result
+ }
+
+ document.write(checkSymmetric(a)) 
+</script>
+</html>

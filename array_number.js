@@ -31,7 +31,7 @@ for (i = 0; i < a.length; i++) {
 }
 
 
-/*
+/* Mảng gồm chữ và số
 
 let array = [];
 for (i = 0; i < 5; i++) {
@@ -41,3 +41,13 @@ for (i = 0; i < 5; i++) {
 }
 
 */
+
+/* Mảng 2 chiều */
+
+let a = Array(5);
+for (let i=0; i < a.length; i++){
+  a[i] = Array(5);
+  for (j=0; j < a[i].length; j++){
+    a[i][j] = Math.floor(Math.random() * 100)
+  }
+}

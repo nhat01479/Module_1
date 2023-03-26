@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h3>Bài 20: Liệt kê các dòng có tổng lớn nhất</h3>
+	</body>
+	<script>
+		let arr = [
+			[1, 2, 7],
+			[6, 9, 4],
+			[7, 8, 5],
+		];
+
+        function maxRow(a){
+            let max = null;
+            let total = 0;
+            let index;
+            let result=[];
+            for (let i = 0; i < a.length; i++) {
+                for (let j = 0; j < a[i].length; j++) {
+                    total += a[i][j];                    
+                }
+                if (total > max) {
+                        max = total;
+                        index = i;
+                    }
+                total = 0;
+            }
+            result.push(a[index]);
+            return result;
+        }
+        console.log(maxRow(arr));
+        
+	</script>
+</html>

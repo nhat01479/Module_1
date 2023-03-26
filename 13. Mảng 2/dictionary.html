@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <input type="text" id="textvalue" />
-    <button type="button" onclick="Transle()">Dịch</button>
-    <p id="result"></p>
-  </body>
-  <script>
-    let Eng_Array = ["hello", "goodbye", "month", "day", "night"];
-    let Vie_Array = ["xin chào", "tạm biệt", "tháng", "ngày", "đêm"];
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="text" id="textvalue" />
+		<button type="button" onclick="Translate()">Dịch</button>
+		<p id="result"></p>
+	</body>
+	<script>
+		let Eng_Array = ["hello", "goodbye", "month", "day", "night"];
+		let Vie_Array = ["xin chào", "tạm biệt", "tháng", "ngày", "đêm"];
 
-    function Transle() {
-      let textvalue = document.getElementById("textvalue").value;
+		// function Translate() {
+		//   let textvalue = document.getElementById("textvalue").value;
 
-      let index = -1;
-      for (i = 0; i < Eng_Array.length; i++) {
-        if (textvalue == Eng_Array[i]) {
-          index = i;
-          break;
-        }
-      }
-      let result;
-      if (index != -1) result = Vie_Array[index];
-      else result = "Không tìm thấy";
+		//   let index = -1;
+		//   for (i = 0; i < Eng_Array.length; i++) {
+		//     if (textvalue == Eng_Array[i]) {
+		//       index = i;
+		//       break;
+		//     }
+		//   }
+		//   let result;
+		//   if (index != -1) result = Vie_Array[index];
+		//   else result = "Không tìm thấy";
 
-      document.getElementById("result").innerText = result;
-    }
-//----------------------------------------------------------------------
-// function Transle() {
-//     //orange
-//     let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
-//     let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
-//     let textvalue = document.getElementById("textvalue").value;
-//     let index_eng = 0;
-//     let result = "";
-//     for (let i = 0; i < arr_eng.length; i++) {
-//         if (textvalue == arr_eng[i]) {
-//             index_eng = i; //2
-//             for (let j = 0; j < arr_vie.length; j++) {
-//                 if (index_eng == j) { //2 == 2
-//                     result = arr_vie[j]; // táo 
-//                 }
-//             }
-//         }
-//     }
-//     document.getElementById("result").innerHTML = result;
-// }
-  </script>
+		//   document.getElementById("result").innerText = result;
+		// }
+		//----------------------------------------------------------------------------------
+
+		function Translate() {
+			let str = document.getElementById("textvalue").value;
+			let result = "Từ không có trong từ điển";
+			for (let i = 0; i < Eng_Array.length; i++) {
+				if (str.toUpperCase() == Eng_Array[i].toUpperCase()) {
+					result = Vie_Array[i];
+					break;
+				}
+			}
+			document.getElementById("result").innerText = result;
+		}
+
+		//----------indexOf---------------------------------------------------------
+		// function Translate() {
+		//   let str = document.getElementById('textvalue').value;
+		//   let result;
+		//   let index = Eng_Array.indexOf(str);
+		//   if (index == -1) result = "Từ không có trong từ điển";
+		//   else result = Vie_Array[index]
+		//   document.getElementById('result').innerText = result;
+		// }
+		//---------------------Tham khảo trong Jamé-------------------------------------------------
+		// function Transle() {
+		//     //orange
+		//     let arr_eng = ["banana", "apple", "orange", "pen", "pencil", "book"];
+		//     let arr_vie = ["chuối", "táo", "cam", "bút", "bút chì", "sách"];
+		//     let textvalue = document.getElementById("textvalue").value;
+		//     let index_eng = 0;
+		//     let result = "";
+		//     for (let i = 0; i < arr_eng.length; i++) {
+		//         if (textvalue == arr_eng[i]) {
+		//             index_eng = i; //2
+		//             for (let j = 0; j < arr_vie.length; j++) {
+		//                 if (index_eng == j) { //2 == 2
+		//                     result = arr_vie[j]; // táo
+		//                 }
+		//             }
+		//         }
+		//     }
+		//     document.getElementById("result").innerHTML = result;
+		// }
+	</script>
 </html>

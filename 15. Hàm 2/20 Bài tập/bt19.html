@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h3>Bài 19: Tìm số chẵn lớn nhất trong ma trận</h3>
+	</body>
+	<script>
+		let arr = [
+			[1, 2, 7],
+			[6, 0, 4],
+			[5, 8, 3],
+		];
+		console.log(arr);
+
+        let count = 0;
+        function findMaxEven(a) {
+			let max = null;
+            // let count = 0;
+            let result;
+			for (let i = 0; i < a.length; i++) {
+				for (let j = 0; j < a[i].length; j++) {
+					if (a[i][j] % 2 == 0 && a[i][j] > 0) {
+                        count++
+						if (a[i][j] > max) max = a[i][j];                         
+					}
+				}
+			}
+            if (count == 0) return result = 'Trong mảng không có số chẵn nào';
+            return result = 'Số chẵn lớn nhất trong ma trận là ' + max;
+		}        
+        console.log(`${findMaxEven(arr)}`)
+        
+        /*
+        let matrix = [
+			[1, 2, 7],
+			[6, 0, 4],
+			[5, 8, 3],
+		];
+		// Khởi tạo biến lưu số chẵn lớn nhất
+
+		let maxEvenNumber = null;
+
+		// Duyệt qua từng phần tử của ma trận
+		for (let i = 0; i < matrix.length; i++) {
+			for (let j = 0; j < matrix[i].length; j++) {
+				// Kiểm tra phần tử có phải là số chẵn không
+				if (matrix[i][j] % 2 === 0) {
+					// Kiểm tra xem phần tử đó có lớn hơn số chẵn lớn nhất hiện tại không
+					if (maxEvenNumber === null ||matrix[i][j] > maxEvenNumber) {
+						maxEvenNumber = matrix[i][j];
+					}
+				}
+			}
+		}
+
+		// In ra số chẵn lớn nhất trong ma trận
+		if (maxEvenNumber !== null) {
+			console.log(`Số chẵn lớn nhất trong ma trận là ${maxEvenNumber}`);
+		} else {
+			console.log("Không tìm thấy số chẵn nào trong ma trận");
+		}
+        */
+	</script>
+</html>

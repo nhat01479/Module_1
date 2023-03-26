@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        Bài 15: Kiểm tra một cột ma trận có giảm dần hay không
+
+    </h3>
+</body>
+<script>
+    let a = [
+    [6, 4, 1, 2, 8],
+    [5, 2, 1, 3, 7],
+    [3, 3, 1, 4, 6]
+    ]
+   
+    console.log(a);
+
+    function checkPositiveNumbers(arr, column){
+        for (let i = 0; i < arr.length-1; i++){
+            if (arr[i][column] <= arr[i+1][column]) {
+                return false;                
+            }
+        }
+        return true;
+    }
+
+    console.log(checkPositiveNumbers(a, 4));
+
+    /* Check tất cả các cột
+    function checkPositiveNumbers(arr){
+        let check = true;
+        for (let i = 0; i < arr.length-1; i++){
+            for (let j = 0; j < arr[i].length; j++) {
+                if ((arr[i][j])  < (arr[i+1][j])) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        return check;
+    }
+    console.log(checkPositiveNumbers(a));
+    */
+
+    
+</script>
+</html>
