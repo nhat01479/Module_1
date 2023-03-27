@@ -10,31 +10,31 @@
 		<h3>[*Bài tập] Kiểm tra từ đối xứng</h3>
 	</body>
 	<script>
-		let a = "leoel";
+		let str = "leoael";
 
-		function isPalindrome(arr) {
-			let result = true;
-			for (let i = 0; i < arr.length / 2; i++) {
-				if (arr[i] !== arr[arr.length - 1 - i]) {
-					result = false;
-					break;
-				}
-			}
-			return result;
+		// function isPalindrome(arr) {
+		// 	let result = true;
+		// 	for (let i = 0; i < arr.length / 2; i++) {
+		// 		if (arr[i] !== arr[arr.length - 1 - i]) {
+		// 			result = false;
+		// 			break;
+		// 		}
+		// 	}
+		// 	return result;
+		// }
+		// document.write(isPalindrome(a))
+
+
+//Đệ quy
+
+		function isPalindrome(a) {
+			let chars = a.split("");
+			if (chars.length <= 1) return true;
+			if (chars[0] !== chars[chars.length - 1]) return false;
+			chars.shift();
+			chars.pop();
+			return isPalindrome(chars.join(""));
 		}
-        document.write(isPalindrome(a))
-
-		//  function checkSymmetric(arr) {
-		//     let result = true;
-		//     for (let i=0; i<arr.length/2; i++){
-		//         if (arr[i] !== arr[arr.length - 1 -i]) {
-		//             result = false;
-		//             break;
-		//         }
-		//     }
-		//     return result
-		//  }
-
-		//  document.write(checkSymmetric(a))
+		document.write(isPalindrome(str));
 	</script>
 </html>

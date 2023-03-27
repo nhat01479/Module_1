@@ -1,0 +1,6 @@
+ Class .table-striped thêm màu xen kẽ cho các hàng trong bảng:  
+         
+  <table class="table table-striped">
+
+...................
+Bootstrap
