@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    [Bài giảng] Thực hành Class và Object (Quiz)
+    <!--
+        Class Student là 1 mẫu để tạo ra các đối tượng sinh viên, bao gồm các thuộc tính (id, name, address) và phương thức getInfor trả về thông tin đầy đủ của sinh viên
+        Object student là một instance của Class Student được tạo ra bằng từ khóa "new", với các giá trị id, name, address được truyền vào. Sau đó, ta sử dụng phương thức getInfor để trả về thông tin đầy đủ của sinh viên này.
+        Khi chạy đoạn mã trên, kết quả được in ra trên console sẽ là thông tin đầy đủ của sinh viên, bao gồm id, name và address.
+    -->
+</body>
+<script>
+// Khởi tạo lớp, đối tượng và hiển thị thông tin của đối tượng
+ /* 
+    function Student(id, name, address) {   //Student: class
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.getInfor = function (){
+            return 'Id=' + this.id + ' Name=' + this.name + ' Address=' + this.address;
+        }
+    }
+    var student = new Student(1, 'Nguyễn Minh Nhật', 'Huế');            //student: object;
+    console.log(student.getInfor());
+*/
+
+//Sử dụng Object Literals để khởi tạo đối tượng------------------------------------------------------------
+
+    var student = {
+        id: 1,
+        name: 'Nguyễn Minh Nhật',
+        address: 'Huế',
+        getInfor: function (){
+            return 'Id=' + this.id + ' Name=' + this.name + ' Address=' + this.address;
+        }
+    }
+    console.log(student.getInfor());
+    console.log(student.getInfor);
+//student: object literals(hằng đối tượng)
+//id, name, address: property (thuộc tính)
+//getInfor: function(){}: method (phương thức)
+</script>
+</html>

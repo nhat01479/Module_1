@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td {
+            border: none;            
+            border-collapse: collapse;
+        }
+        table td {
+            border-bottom: 1px solid;
+        }        
+       button {
+        background-color: rgb(1, 255, 1);
+        border: none;
+        border-radius: 20%;
+       }
+       table tr {
+        background-color: rgb(220, 237, 241);
+       }
+       
+    </style>
+</head>
+<body>  
+    <div id="abc">
+
+    </div>  
+    <div id="aaa">
+        <div>Add New Product</div>
+        <input type="text" id="product" placeholder="New Prodoct"><input type="button" value="Add" onclick="addProduct()"><br>
+        <div>Display All Product</div>
+        <div>
+            <span>Product Name</span>
+            <span id="quantity"></span>
+        </div>
+    </div>
+    
+    <table id="menu" border="1">
+    </table>
+    
+</body>
+<script>
+    let menu = ['Samsung Galaxy','Apple Iphone X', 'Xiaomi'];    
+    let table = document.getElementById('menu'); 
+
+    function displayProduct(){   //menu có thể đổi thành từ khóa khác
+        let data = '';
+        let num = menu.length;  
+        document.getElementById('quantity').innerHTML = '&emsp;&emsp;' + 'Số lượng: ' + num;         
+
+        for (let i=0; i<menu.length; i++){
+        data += '<tr>'+'<td class="name">' + menu[i] + '</td>' + '<td><button onclick="editProduct('+i+')">Edit</button></td>' + '<td><button onclick="deleteProduct('+i+')">Delete</button></td>' + '<tr>';   
+        }
+        table.innerHTML = data; 
+           
+    }  
+    displayProduct(menu); 
+    
+    function addProduct(){
+        let product = document.getElementById('product').value; 
+        menu.push(product);      
+        displayProduct(menu)
+    }
+
+    function editProduct(index){
+        let newName = prompt('Nhập tên sản phẩm');
+        menu[index] = newName;
+        displayProduct(menu);        
+    }   
+    
+    function deleteProduct(index){
+        menu.splice(index,1)
+        displayProduct(menu)
+    }
+    
+
+    
+
+</script>
+</html>
