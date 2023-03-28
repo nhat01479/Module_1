@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h3>Hiệu ứng Gradient</h3>
+		<canvas id="cv"width="200"height="100"style="border: 1px solid #d3d3d3"></canvas>
+
+		
+	</body>
+	<script>
+		/* Dùng phương thức 'createLinearGadient(), addColorStop()' */
+		let c = document.getElementById("cv");
+		let ctx = c.getContext("2d");
+		//Create gradient
+		var grd = ctx.createLinearGradient(0, 0, 170, 0); //gradient (0,0: tọa độ bắt đầu) (170,0: tọa độ kết thúc)
+		// var grd = ctx.createLinearGradient(75,50,5,90,60,100); //gradient hình tròn (tọa độ tâm trong x2,bán kính, tọa độ tâm ngoài x2, bán kính)
+		grd.addColorStop(0, "black");
+		grd.addColorStop(0.3, "magenta");
+		grd.addColorStop(0.5, "blue");
+		grd.addColorStop(0.6, "green");
+		grd.addColorStop(0.8, "yellow");
+		grd.addColorStop(1, "red");
+		//Fill withstyle gradient
+		ctx.fillStyle = grd;			//Bối cảnh vẽ được đặt thành gradient
+		ctx.fillRect(10, 10, 150, 80); //Tô 1 hình chữ nhật bằng gradient
+										//Hình chữ nhật có tọa độ (10,10), chiều rộng 150 và chiều cao 80
+	</script>
+</html>

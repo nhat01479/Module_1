@@ -16,7 +16,7 @@
 </body>
 <script>
 // Khởi tạo lớp, đối tượng và hiển thị thông tin của đối tượng
- /* 
+  
     function Student(id, name, address) {   //Student: class
         this.id = id;
         this.name = name;
@@ -26,11 +26,11 @@
         }
     }
     var student = new Student(1, 'Nguyễn Minh Nhật', 'Huế');            //student: object;
-    console.log(student.getInfor());
-*/
+    console.log(student.getInfor());                                    //Từ khóa new để khai báo đối tượng
+
 
 //Sử dụng Object Literals để khởi tạo đối tượng------------------------------------------------------------
-
+/*
     var student = {
         id: 1,
         name: 'Nguyễn Minh Nhật',
@@ -39,8 +39,12 @@
             return 'Id=' + this.id + ' Name=' + this.name + ' Address=' + this.address;
         }
     }
-    console.log(student.getInfor());
-    console.log(student.getInfor);
+    console.log(student.getInfor()); //Id=1 Name=Nguyễn Minh Nhật Address=Huế
+
+    console.log(student.getInfor); //Id=1 Name=Nguyễn Minh Nhật Address=Huế
+
+*/
+
 //student: object literals(hằng đối tượng)
 //id, name, address: property (thuộc tính)
 //getInfor: function(){}: method (phương thức)

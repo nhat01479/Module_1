@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="cv1" width="1396px" height="649"></canvas>
+</body>
+<script>
+    function Circle(x, y, radius){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+    function getRandomHex(){
+        return Math.floor(Math.random()*255);   //random để lấy mã màu ngẫu nhiên
+    }
+    function getRandomColor(){                  //tạo màu ngẫu nhiên
+        let red = getRandomHex();   
+        let green = getRandomHex();
+        let blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green +")";
+    }
+/* Vẽ hình tròn với bán kính cho trước
+    function createCircle(){
+        let ctx = document.getElementById('cv1').getContext('2d');
+        let circle = new Circle(200,200,50);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2*Math.PI);
+        ctx.fill(); //ctx.stroke() vẽ đường tròn; ctx.fill() tô màu hình tròn
+    }    
+    createCircle();
+*/
+/* Vẽ hình tròn với bán kính ngẫu nhiên*/
+    function createCircle(){
+        let ctx = document.getElementById('cv1').getContext('2d');
+        let radius = Math.floor(Math.random()*80);              //random radius, x, y;
+        let x = Math.floor(Math.random()*window.innerWidth);
+        let y = Math.floor(Math.random()*window.innerHeight);
+        let color = getRandomColor();
+        let circle = new Circle(x,y,radius);        
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2*Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+    createCircle();
+    createCircle(); //Dùng thêm 1 hàm để tạo 2 hình tròn
+
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Khởi tạo đối tượng
+</body>
+<script>
+/* Sử dụng hàm
+function Person(ho, ten){
+    this.firstName = ho;
+    this.lastName = ten;
+    //method
+    this.greeting = function () {
+        return 'Hello, I am ' + this.firstName + this.lastName;
+    }
+    this.toString = function () {
+        return this.firstName + '-' + this.lastName;
+    }
+    this.setlastName = function (name) {
+       return this.lastName = name;
+    }
+    this.getlastName = function () {
+                return this.lastName;
+            }
+}
+let person1 = new Person('John','Wick');
+console.log(person1.firstName);         //John
+console.log(person1.greeting());        //Hello, I am JohnWick
+person1.setlastName('Henry');           //Đổi tên thành từ Wick sang Henry
+console.log(person1.firstName);         //Henry
+console.log(person1.greeting());        //Hello, I am JohnHenry
+*/
+/* Sử dụng từ khóa class
+class Person{
+    constructor(ho, ten){
+        this.firstName = ho;
+        this.lastName = ten;
+    }
+    //method
+    greeting(){
+        return 'Hello, I am ' + this.firstName + ' ' + this.lastName;
+    }
+    toString() {
+        return this.firstName + '-' + this.lastName;
+    }
+    setlastName(name) {
+        return this.lastName = name;
+    }
+    getlastName(){
+        return this.lastName;
+    }
+}
+let person1 = new Person('John', 'Wick');
+console.log(person1.greeting()); //Hello, I am John Wick
+person1.setlastName('Henry');     //Đổi tên Wick thành Henry
+console.log(person1.lastName);     //Henry
+*/
+let person = {
+    firstName: 'John',
+    lastName: 'Wick',
+    greeting: function(){
+        return 'Hello, I am ' + this.firstName + ' ' + this.lastName;
+    },
+    toString: function(){
+        return this.firstName + '-' + this.lastName;
+    },
+    setlastName: function(name){
+        return this.lastName = name;
+    },
+    getlastName: function(){
+        return this.lastName;
+    }
+}
+person.setlastName('Nhật');
+console.log(person.lastName);
+</script>
+</html>
