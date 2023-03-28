@@ -10,7 +10,7 @@
     Khởi tạo đối tượng
 </body>
 <script>
-/* Sử dụng hàm
+/* Sử dụng hàm____________________________________________________________
 function Person(ho, ten){
     this.firstName = ho;
     this.lastName = ten;
@@ -35,7 +35,7 @@ person1.setlastName('Henry');           //Đổi tên thành từ Wick sang Henr
 console.log(person1.firstName);         //Henry
 console.log(person1.greeting());        //Hello, I am JohnHenry
 */
-/* Sử dụng từ khóa class
+/* Sử dụng từ khóa class_____________________________*/
 class Person{
     constructor(ho, ten){
         this.firstName = ho;
@@ -59,24 +59,27 @@ let person1 = new Person('John', 'Wick');
 console.log(person1.greeting()); //Hello, I am John Wick
 person1.setlastName('Henry');     //Đổi tên Wick thành Henry
 console.log(person1.lastName);     //Henry
-*/
-let person = {
-    firstName: 'John',
-    lastName: 'Wick',
-    greeting: function(){
-        return 'Hello, I am ' + this.firstName + ' ' + this.lastName;
-    },
-    toString: function(){
-        return this.firstName + '-' + this.lastName;
-    },
-    setlastName: function(name){
-        return this.lastName = name;
-    },
-    getlastName: function(){
-        return this.lastName;
-    }
-}
-person.setlastName('Nhật');
-console.log(person.lastName);
+
+ 
+//Object literal
+
+// let person = {
+//     firstName: 'John',
+//     lastName: 'Wick',
+//     greeting: function(){
+//         return 'Hello, I am ' + this.firstName + ' ' + this.lastName;
+//     },
+//     toString: function(){
+//         return this.firstName + '-' + this.lastName;
+//     },
+//     setlastName: function(name){
+//         return this.lastName = name;
+//     },
+//     getlastName: function(){
+//         return this.lastName;
+//     }
+// }
+// person.setlastName('Nhật');
+// console.log(person.lastName);
 </script>
 </html>

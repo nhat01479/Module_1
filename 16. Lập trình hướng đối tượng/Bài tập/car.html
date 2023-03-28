@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Car</title>
+    <style>
+        canvas {
+            border: 1px solid #d3d3d3;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" ></canvas>
+    <p><img id='img' src="images/car_1.png" width="10%"></p>
+    <p><button onclick="myCanvas()">Chèn ảnh vào canvas</button></p>
+</body>
+<script>
+    function myCanvas() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("img");
+    ctx.drawImage(img,50,50);
+    }
+    </script>
+</html>
