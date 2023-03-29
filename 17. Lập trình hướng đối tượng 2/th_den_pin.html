@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>[Thực hành] Xây dựng lớp mô phỏng sự hoạt động của đèn pin</h3>
+</body>
+<script>
+    class Battery{
+        setEnergy(energy){
+            this.energy = energy;
+        };
+        getEnergy(){
+            return this.energy
+        };
+        decreaseEnergy(){
+            if (this.energy > 0) this.energy-=2;
+        }
+    }
+    class FlashLamp{
+        setBattery(battery){
+            this.battery = battery;
+        };
+        getBatteryInfo(){
+            return this.battery.getEnergy();
+        };
+        // light(){
+        //     if(this.status) document.write('Lighting');
+        //     else document.write('Not lighting')
+        // };
+        turnOn(){                   
+            document.write('Đèn sáng <br>');      
+            battery.decreaseEnergy();
+        };
+        turnOff(){
+            this.status = false;
+            document.write('Đèn tắt <br>')            
+        }
+    };
+    //--------------------------------
+    let battery = new Battery();    //tạo cục pin
+    battery.setEnergy(10);          //set pin có energy = 10
+
+    let flashlamp = new FlashLamp();    //tạo đèn
+    flashlamp.setBattery(battery);      //đặt cục pin ở trên vào cây đèn
+
+    document.write('Battery info: ' + flashlamp.getBatteryInfo() + '<br>');
+    // flashlamp.light();              //chưa bật
+
+    // document.write('Turn on <br>'); //Not lighting
+    flashlamp.turnOn();             //Bật
+    // flashlamp.light();              //Lighting
+    flashlamp.turnOff();            //Tắt
+
+    document.write('Battery info: ' + flashlamp.getBatteryInfo() + '<br>');
+    for (let i=1; i<=10; i++){
+        flashlamp.turnOn();
+        flashlamp.turnOff();
+        document.write('Battery info: ' + flashlamp.getBatteryInfo() + '<br>');
+        if (flashlamp.getBatteryInfo() <= 0) {
+            document.write('Hết pin');
+            break;
+        }
+    } 
+   
+    
+</script>
+</html>

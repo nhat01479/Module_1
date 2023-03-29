@@ -18,14 +18,13 @@
         constructor(name, battery){
             this.name = name;
             this.battery = battery;
-            this.setMess = setMess; //tin nhắn đang soạn
-            this.sendMess = sendMess;   //tin nhắn đã gửi
-            this.receiveMess = receiveMess; //tin nhắn đã nhận
+            this.setMess = []; //tin nhắn đang soạn
+            this.sendMess = [];   //tin nhắn đã gửi
+            this.receiveMess = []; //tin nhắn đã nhận
             this.status = 'on';
         }
         checkStatus(){
-            if (this.battery > 0) return true;
-            else return false;
+            return this.status;
         };
         turnOn(){    
             if (this.status='off')  return this.status='on';        
@@ -36,25 +35,25 @@
         charge(){
             return this.battery = 100;
         }
-        writeMess(){             //soạn tin
+        writeM(){             //soạn tin
             this.battery--;
-            return this.tempMess;
+            return this.setMess;
         }
-        receiveMess(){      //nhận tin
-
+        receiveM(){      //nhận tin            
             this.battery--;
+            return this.receiveMess;
         }
-        sendMess(){                 //gửi tin
+        sendM(){                 //gửi tin
 
             this.battery--
         }
         seeInbox(){        //xem hộp thư đến
-
             this.battery--
+            this.receiveMess
         }
         seeOutbox(){        //xem hộp thư đi
-
             this.battery--
+
         }
 
     }

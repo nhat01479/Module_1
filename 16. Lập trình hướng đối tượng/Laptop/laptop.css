@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background-color: rgb(255, 255, 255);
+}
+.container {
+    width: 800px;
+    margin: 0px auto;
+}
+.row {
+    display: flex;
+    width: 100%;
+}
+.laptop {
+    width: 33%;
+}
+img:hover{
+    transform: scale(1.05);
+}
+.img {
+    width: 100%;
+    
+    padding: 10px;
+    
+}
+.input {
+    width: 80px;
+}
+.detail {
+    position: relative;
+    left: 30px;
+}
