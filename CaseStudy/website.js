@@ -35,7 +35,7 @@ class Mobile {
                             <p>RAM: ${phone.ram}</p>                
                             <p>Camera: ${phone.camera}</p>                
                             <p>Pin: ${phone.battery} mAh</p> 
-                            <p><button type='button'>Mua ngay</button><p>
+                            <p><button type='submit'>Mua ngay</button><p>
                         </div>
                     </div>`;
             }
