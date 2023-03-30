@@ -15,8 +15,7 @@
 </body>
 <script>
     class Mobile{
-        constructor(name, battery){
-            this.name = name;
+        constructor(battery){
             this.battery = battery;
             this.setMess = []; //tin nhắn đang soạn
             this.sendMess = [];   //tin nhắn đã gửi
@@ -32,31 +31,40 @@
         turnOff(){
             if (this.status='on')  return this.status='off';
         }
-        charge(){
-            return this.battery = 100;
-        }
-        writeM(){             //soạn tin
+        decreaseBattery(){
             this.battery--;
+            if (this.battery == 0) return console.log('Hết pin');
+        }
+        charge(){
+            if (this.battery == 100) return;
+            this.battery++;
+            this.charge();
+        }
+        setMess(){             //soạn tin
+            if (this)
+            decreaseBattery();
             return this.setMess;
         }
         receiveM(){      //nhận tin            
-            this.battery--;
+            decreaseBattery();
             return this.receiveMess;
         }
         sendM(){                 //gửi tin
-
-            this.battery--
+            decreaseBattery();
+            
         }
-        seeInbox(){        //xem hộp thư đến
-            this.battery--
+        showInbox(){        //xem hộp thư đến
+            decreaseBattery();
             this.receiveMess
         }
-        seeOutbox(){        //xem hộp thư đi
-            this.battery--
+        showOutbox(){        //xem hộp thư đi
+            decreaseBattery();
 
         }
 
     }
+    let nokia = new Mobile(10);
+    let iphone = new Mobile(10);
 
     /*----------------------------------------------------------------------------------------
 class Mobile{

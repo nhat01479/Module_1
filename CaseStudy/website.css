@@ -7,9 +7,9 @@
 
 .container-header{
     width: 100%;
-    /* height: 300px; */
-    background-color: #e53939;
-    margin-bottom: 10px;
+    height: 300px;
+    background-color: #2e9feb;
+    margin-bottom: 20px;
 }
 
 .header{
@@ -30,17 +30,23 @@
 }
 
 .category{
+    border:1px solid;
     display: flex;
+    max-width: 1000px;
     justify-content: space-between;
     margin-bottom: 10px;
+    margin: auto;
+
 }
 
 .body-product {
+    max-width: 1400px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    height: 500px;
+    margin-top: 20px;
+    margin: auto;
 }
 
 .product{
@@ -68,7 +74,31 @@
 #img:hover{
     transform: scale(1.05);
 }
-p{
+span{
+    display: block;
     margin-top: 10px;
-    padding-left: 70px;
+    padding-left: 100px;
+}
+
+.clickbuy{
+    border: 0.5px solid;
+    background-color: #ffbc05;
+    width: 75px;
+    height: 25px;
+    border-radius: 5px;
+}
+.clickbuy:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+form{
+    width: 300px;
+}
+label{
+    width: 100%px;
+}
+input{
+    border: 1px solid;
+    width: 100%px;
+    border-radius: 3px;
 }

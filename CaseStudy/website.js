@@ -16,8 +16,13 @@ class Mobile {
     new Mobile('images/IP14PMX.jpg','iPhone 14 Pro Max', '6.7 inches', '128GB',29900000,'6GB', '48MP & 12 MP', '4323'),
     new Mobile('images/IP14P.jpg','iPhone 14 Pro', '6.1 inches', '128GB',25490000,'6GB', '48MP & 12 MP', '3200'),
     new Mobile('images/IP14.jpg','iPhone 14', '6.1 inches', '128GB',21490000,'6GB', '12 MP', '3200'),
-    new Mobile('images/IP13P.jpg','iPhone 13 Pro', '6.1 inches', '1TB',25990000,'6GB', '12 MP', '3095mAh'),
-    new Mobile('images/IP13P.jpg','iPhone 13 Pro', '6.1 inches', '1TB',25990000,'6GB', '12 MP', '3095mAh')
+    new Mobile('images/IP13P.jpg','iPhone 13 Pro', '6.1 inches', '1TB',25990000,'6GB', '12 MP', '3095'),
+    new Mobile('images/ss1.jpg','Samsung Galaxy S23 Ultra 5G', '6.8 inches', '256GB',26990000,'8GB', '200 MP & 12 MP', '5000'),
+    new Mobile('images/ss2.jpg','Samsung Galaxy S23 5G', '6.1 inches', '128GB',21990000,'8GB', '50 MP & 12 MP', '3900'),
+    new Mobile('images/ss3.jpg','Samsung Galaxy Z Fold3 5G', '7.6 & 6.2 inches', '512GB',27990000,'12GB', '3x12MP & 10 MP', '4400'),
+    new Mobile('images/xiaomi1.jpg','Xiaomi 13 Pro', '6.73 inches', '256GB',25990000,'12GB', '50MP & 32MP', '4820'),
+    new Mobile('images/xiaomi2.jpg','Xiaomi 12T', '6.67 inches', '256GB',12490000,'8GB', '108MP & 20MP', '5000'),
+    new Mobile('images/xiaomi3.jpg','Xiaomi 13', '6.36 inches', '256GB',18990000,'8GB', '50MP & 32MP', '4500')
  ]
  console.log(mobiles);
  function renderProduct(){
@@ -28,14 +33,14 @@ class Mobile {
                             <img id='img' src="${phone.img}" alt="">         
                         </div>
                         <div class='detail'>
-                            <p>Tên: ${phone.name}</p>                
-                            <p>Màn hình: ${phone.monitor}</p>                
-                            <p>Bộ nhớ: ${phone.memory}</p>                
-                            <p>Giá: ${phone.cost}</p>                
-                            <p>RAM: ${phone.ram}</p>                
-                            <p>Camera: ${phone.camera}</p>                
-                            <p>Pin: ${phone.battery} mAh</p> 
-                            <p><button type='submit'>Mua ngay</button><p>
+                            <span>${phone.name}</span>                
+                            <span>Màn hình: ${phone.monitor}</span>                
+                            <span>Bộ nhớ: ${phone.memory}</span>                
+                            <span>Giá: ${phone.cost}</span>                
+                            <span>RAM: ${phone.ram}</span>                
+                            <span>Camera: ${phone.camera}</span>                
+                            <span>Pin: ${phone.battery} mAh</span> 
+                            <span><button class='clickbuy'>Mua ngay</button><p>
                         </div>
                     </div>`;
             }
