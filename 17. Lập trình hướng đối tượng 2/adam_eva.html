@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>[Bài tập] Phát triển ứng dụng nhỏ mô phỏng câu chuyện Adam và Eva
+    </h3>
+</body>
+<script>
+    class Apple{
+        constructor(weight){
+            this.weight = weight;
+        }
+        decrease(){
+            if (this.weight > 0) return this.weight--;
+        };
+        isEmpty(){
+            if (this.weight <= 0) return true;
+            else return false;
+        };
+        getWeight(){
+            return 'Táo còn lại ' + this.weight + ' đơn vị';
+        };
+    }
+//----------------------------------------------------------------
+class Human{
+    constructor(name, gender, weight){
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+    }
+    isMale(){
+        if (this.gender == 1) return true;
+        else return false;
+    }    
+    checkApple(apple){
+        return apple.isEmpty();
+    }
+    eat(){
+        if (apple.weight > 0){
+            this.weight++;
+            apple.decrease();
+        }  
+        else {
+        document.write('Táo đã hết + <br>');
+        }
+    };
+    say(string){
+            return document.write(string);
+    };
+    getName(){
+        return this.name;
+    };
+    getGender(){
+        if (this.isMale()) return 'Male';
+        else return 'Female';
+    };
+    getWeight(){
+       return this.weight;
+    };
+    setName(name){
+        this.name = name;
+    };    
+    setWeight(weight){
+        this.weight = weight;
+    }
+    getInfo(){
+        return 'Tên: ' + this.name + ', giới tính: ' + this.getGender() + ', cân nặng: ' + this.weight + ' kg'; 
+    }
+}
+//--------------------------------------------
+let apple = new Apple(10);
+let adam = new Human('Adam', 1, 60);
+let eva = new Human('Eva', 0, 45);
+
+document.write(adam.getInfo() + '<br>');
+adam.say('Xin chào, tôi là ' + adam.name + '<br>')
+
+document.write(eva.getInfo() + '<br>');
+eva.say('Xin chào, tôi là ' + eva.name + '<br>')
+document.write('Táo đã hết? ' + adam.checkApple(apple) + '<br>');
+document.write(apple.getWeight() + '<br>');
+adam.eat(apple);
+document.write('Adam nặng ' + adam.getWeight() + 'kg <br>')
+document.write(apple.getWeight()+'<br>');
+while (apple.isEmpty() !== true ){
+    adam.eat(apple);
+    document.write('Adam nặng ' + adam.getWeight() + 'kg <br>')
+    eva.eat(apple);
+    document.write('Eva nặng ' + eva.getWeight() + 'kg <br>')
+
+    document.write(apple.getWeight() +'<br>')   
+}
+</script>
+</html>
