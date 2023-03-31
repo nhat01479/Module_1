@@ -6,25 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="website.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
 </head>
 <body>
     <div class="container-header">
-        <div class="header">
-            <div class="header-title">Header</div>
-            <div class="header-title">Header</div>
-            <div class="header-title">Header</div>
+        <div class="header-top">            
+        </div>
+        <div class="header-bottom">
+            <div class="header-bottom-1">
+                <img src="images/CodeGym-3-02-copy-removebg-preview.png" alt="">
+            </div>
+            <div class="header-bottom-2">
+                <input type="text" placeholder="Tìm kiếm">                
+            </div>
+            <div class="header-bottom-3"></div>
         </div>
     </div>
     <div class="container-body">
         <div class="body">
             <div class="category">
-                <div><button>Category</button></div>
-                <div><button>Category</button></div>
-                <div><button>Category</button></div>
-                <div><button>Category</button></div>
-                <div><button>Category</button></div>
+                <div><button>Tất cả</button></div>
+                <div><button>Apple</button></div>
+                <div><button>Samsung</button></div>
+                <div><button>Xiaomi</button></div>
+                <div><button>Oppo</button></div>
+                <div><button>Vivo</button></div>
             </div>
             <div class="body-product">
                 <!-- <div class="product">
@@ -42,11 +49,18 @@
             </div>
         </div>
     </div>
-    <div>
-        <form>
-            <div class="form-input"><span>Họ và tên</span><input type="text"></div>
-            <div class="form-input"><span>Số điện thoại</span><input type="text"></div>
-            <div class="form-input"><span>Địa chỉ</span><input type="text"></div>
+    <div>    
+        <form class="form">
+            
+            <h3 style="text-align: center; color: blue;">Giỏ hàng</h3>
+            
+            <div class="form-input" style="border-bottom: 1px solid;">
+                <div style="display: flex">
+                    <div class="input">iPhone 14 Pro Max &nbsp; </div>
+                    <div class="">Giá: 1200000 &nbsp;</div>
+                    <div class=""><button class="remove-cart" type='button' style="width:40px">Xoá</button></div><br>          
+                </div>   
+            </div>                                 
         </form>
     </div>
     <script src="website.js"></script>
