@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="website.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container-header">
@@ -15,24 +16,25 @@
         </div>
         <div class="header-bottom">
             <div class="header-bottom-1">
-                <img src="images/Black___Beige_Minimalist_Fashion_Brand_Logo-removebg-preview.png" alt="">
+                <img src="images/codegym1.png" alt="">
             </div>
             <div class="header-bottom-2">
-                <input type="text" placeholder="Tìm kiếm">                
+                <input type="text" placeholder="Tìm kiếm">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>                
             </div>
-            <div class="header-bottom-3"></div>
+            <div class="header-bottom-3">&nbsp;<button title="Click để ẩn/hiện giỏ hàng" type="button" onclick="showCart()"><i class="fa-sharp fa-solid fa-cart-plus"></button></i></div>
         </div>
     </div>
     <div class="container-body">
         <div class="body">
-            <div class="category">
+            <!-- <div class="category">
                 <div><button>Tất cả</button></div>
                 <div><button>Apple</button></div>
                 <div><button>Samsung</button></div>
                 <div><button>Xiaomi</button></div>
                 <div><button>Oppo</button></div>
                 <div><button>Vivo</button></div>
-            </div>
+            </div> -->
             <div class="body-product">
                 <!-- <div class="product">
                     <div class="product-img">
@@ -58,7 +60,7 @@
                         <td>Sản phẩm</td>
                         <td>Giá</td>
                         <td>SL</td>
-                        <td>&nbsp;&nbsp;&nbsp;</td>
+                        <td></td>
                     </tr>
                 </thead>
                 <tbody>
@@ -69,17 +71,40 @@
                         <td ><button class="remove-cart" type='button' style="width:40px">Xoá</button></td>
                     </tr> -->                    
                 </tbody>
-                <tfoot class="totalCart">                    
+                <tfoot class="totalCart">
+                    <tr>                  
                         <td style="text-align: center;">Tổng cộng</td>
                         <td style="text-align: center;"><span>0</span><sup>đ</sup></td>
-                    
+                    </tr>
+                    <tr><td colspan="4" style="text-align: center; padding: 10px;"><button type="button" id="checkout" onclick="handleCheckout()">Thanh toán</button></td></tr>
                 </tfoot>
             </table>
                                         
         </form>
     </div>
 
-
+    <div class="container-foot">
+        
+            <div class="info-bar-top">
+                <div style="width:70%">
+                    <img src="images/CodeGym-3-02-copy-removebg-preview.png" alt="">
+                    <p>Huế: Tầng 4, 28 Nguyễn Tri Phương, Phường Phú Nhuận, TP Huế, TTH.</p>
+                    <p>Huế: Tầng 4, 28 Nguyễn Tri Phương, Phường Phú Nhuận, TP Huế, TTH.</p>
+                    <p>Huế: Tầng 4, 28 Nguyễn Tri Phương, Phường Phú Nhuận, TP Huế, TTH.</p>
+                    <p>Huế: Tầng 4, 28 Nguyễn Tri Phương, Phường Phú Nhuận, TP Huế, TTH.</p>
+                    <p>Huế: Tầng 4, 28 Nguyễn Tri Phương, Phường Phú Nhuận, TP Huế, TTH.</p>
+                </div>
+                <div style="width:30%; margin-top: 40px; font-size: large;  margin-left: 50px;">
+                    <p><b>Tổng đài hỗ trợ:</b></p>
+                    <p>Hotline: 0989 534 458</p>
+                    <p>Email: info@codegym.vn</p>
+                    <p style="font-size: 200%;"><i class="fa-brands fa-facebook" style="color: #007bff;"></i> <i class="fa-brands fa-youtube" style="color: #ff0000;"></i> <i class="fa-brands fa-linkedin" style="color: #1f5bc1;"></i></p>
+                </div>            
+            </div> 
+            <div class="info-bar-bottom">       
+                <div >Copyright by CodeGym.vn</div>
+            </div>
+    </div>
    
     <script src="website.js"></script>
     <script src="cart.js"></script>

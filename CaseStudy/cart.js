@@ -1,3 +1,16 @@
+// Show Cart
+
+function showCart(){
+    var form = document.querySelector('.form-div');
+    if (form.style.display == 'block') form.style.display = 'none';
+    else form.style.display = 'block';
+}
+//Checkout
+function handleCheckout(){
+    alert('Đơn hàng đã thanh toán thành công')
+}
+
+
 // Add vào giỏ hàng
 
 const btn = document.querySelectorAll('button');    //Lấy tất cả các nút
@@ -15,7 +28,7 @@ btn.forEach(function(button,index){
 
 function addtoCart(productName,productCost){
     var addtr = document.createElement('tr'); //tạo thêm 1 dòng
-    var trcontent = `<tr><td>${productName}</td><td style="text-align: center;"><span>${productCost}</span><sup>đ</sup></td><td style="text-align: center;"><input type="number" min="1" value="1" style="width:30px; text-align: center;"></td><td style="text-align: right;"><button class="remove-cart" type='button' style="width:40px">Xoá</button></td></tr>`;
+    var trcontent = `<tr><td>${productName}</td><td style="text-align: center;"><span>${productCost}</span><sup>đ</sup></td><td style="text-align: center;"><input type="number" value="1" min="1" style="width:30px; text-align: center;"></td><td style="text-align: right;"><button class="remove-cart" type='button' style="width:40px">Xoá</button></td></tr>`;
     addtr.innerHTML = trcontent; //dòng đó có nội dung bằng trcontent
     var cartTable = document.querySelector('tbody');
     cartTable.append(addtr) //append add thêm 1 dòng tr vào phía dưới của tbody
@@ -36,6 +49,6 @@ function totalCart(){
     }
     let c = document.querySelector('.totalCart span')
     c.innerHTML = totalC;
-    console.log(totalC);
+   
 }
  

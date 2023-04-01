@@ -19,7 +19,7 @@ class Mobile {
     new Mobile('images/IP13P.jpg','iPhone 13 Pro', '6.1"', '1TB',25990000,'6GB', '12 MP', '3095'),
     new Mobile('images/ss1.jpg','Samsung Galaxy S23 Ultra 5G', '6.8"', '256GB',26990000,'8GB', '200 MP & 12 MP', '5000'),
     new Mobile('images/ss2.jpg','Samsung Galaxy S23 5G', '6.1"', '128GB',21990000,'8GB', '50 MP & 12 MP', '3900'),
-    new Mobile('images/ss3.jpg','Samsung Galaxy Z Fold3 5G', '7.6 & 6.2"', '512GB',27990000,'12GB', '3x12MP & 10 MP', '4400'),
+    new Mobile('images/ss3.jpg','Samsung Galaxy Z Fold3 5G', '7.6" & 6.2"', '512GB',27990000,'12GB', '3x12MP & 10 MP', '4400'),
     new Mobile('images/xiaomi1.jpg','Xiaomi 13 Pro', '6.73"', '256GB',25990000,'12GB', '50MP & 32MP', '4820'),
     new Mobile('images/xiaomi2.jpg','Xiaomi 12T', '6.67"', '256GB',12490000,'8GB', '108MP & 20MP', '5000'),
     new Mobile('images/xiaomi3.jpg','Xiaomi 13', '6.36"', '256GB',18990000,'8GB', '50MP & 32MP', '4500')
