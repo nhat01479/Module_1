@@ -13,16 +13,16 @@ class Mobile {
 
 
  let mobiles = [
-    new Mobile('images/IP14PMX.jpg','iPhone 14 Pro Max', '6.7 inches', '128GB',29900000,'6GB', '48MP & 12 MP', '4323'),
-    new Mobile('images/IP14P.jpg','iPhone 14 Pro', '6.1 inches', '128GB',25490000,'6GB', '48MP & 12 MP', '3200'),
-    new Mobile('images/IP14.jpg','iPhone 14', '6.1 inches', '128GB',21490000,'6GB', '12 MP', '3200'),
-    // new Mobile('images/IP13P.jpg','iPhone 13 Pro', '6.1 inches', '1TB',25990000,'6GB', '12 MP', '3095'),
-    // new Mobile('images/ss1.jpg','Samsung Galaxy S23 Ultra 5G', '6.8 inches', '256GB',26990000,'8GB', '200 MP & 12 MP', '5000'),
-    // new Mobile('images/ss2.jpg','Samsung Galaxy S23 5G', '6.1 inches', '128GB',21990000,'8GB', '50 MP & 12 MP', '3900'),
-    // new Mobile('images/ss3.jpg','Samsung Galaxy Z Fold3 5G', '7.6 & 6.2 inches', '512GB',27990000,'12GB', '3x12MP & 10 MP', '4400'),
-    // new Mobile('images/xiaomi1.jpg','Xiaomi 13 Pro', '6.73 inches', '256GB',25990000,'12GB', '50MP & 32MP', '4820'),
-    // new Mobile('images/xiaomi2.jpg','Xiaomi 12T', '6.67 inches', '256GB',12490000,'8GB', '108MP & 20MP', '5000'),
-    // new Mobile('images/xiaomi3.jpg','Xiaomi 13', '6.36 inches', '256GB',18990000,'8GB', '50MP & 32MP', '4500')
+    new Mobile('images/IP14PMX.jpg','iPhone 14 Pro Max', '6.7"', '128GB',29900000,'6GB', '48MP & 12 MP', '4323'),
+    new Mobile('images/IP14P.jpg','iPhone 14 Pro', '6.1"', '128GB',25490000,'6GB', '48MP & 12 MP', '3200'),
+    new Mobile('images/IP14.jpg','iPhone 14', '6.1"', '128GB',21490000,'6GB', '12 MP', '3200'),
+    new Mobile('images/IP13P.jpg','iPhone 13 Pro', '6.1"', '1TB',25990000,'6GB', '12 MP', '3095'),
+    new Mobile('images/ss1.jpg','Samsung Galaxy S23 Ultra 5G', '6.8"', '256GB',26990000,'8GB', '200 MP & 12 MP', '5000'),
+    new Mobile('images/ss2.jpg','Samsung Galaxy S23 5G', '6.1"', '128GB',21990000,'8GB', '50 MP & 12 MP', '3900'),
+    new Mobile('images/ss3.jpg','Samsung Galaxy Z Fold3 5G', '7.6 & 6.2"', '512GB',27990000,'12GB', '3x12MP & 10 MP', '4400'),
+    new Mobile('images/xiaomi1.jpg','Xiaomi 13 Pro', '6.73"', '256GB',25990000,'12GB', '50MP & 32MP', '4820'),
+    new Mobile('images/xiaomi2.jpg','Xiaomi 12T', '6.67"', '256GB',12490000,'8GB', '108MP & 20MP', '5000'),
+    new Mobile('images/xiaomi3.jpg','Xiaomi 13', '6.36"', '256GB',18990000,'8GB', '50MP & 32MP', '4500')
  ];
 // Hàm render sản phẩm ra màn hình
  function renderProduct(){
@@ -37,24 +37,27 @@ class Mobile {
                         </div>
 
                         <div class='detail'>
-                            <span class='name' style='color: blue;'>${phone.name}</span>                
-                            <span>Màn hình: ${phone.monitor}</span>                
-                            <span>Bộ nhớ: ${phone.memory}</span>                
-                            <span class='cost' >Giá: ${phone.cost}</span>                
+                            <span class='name' style='color: blue;'>${phone.name}</span>
+                            <span >               
+                                <span style="border-radius: 3px; background-color: #E0E0E0">&emsp;${phone.monitor}&emsp;</span>                
+                                <span style="border-radius: 3px; background-color: #E0E0E0">&emsp;${phone.memory}&emsp;</span>  
+                            </span>              
+                            <span class='cost' style='font-size: larger'><b>${phone.cost}</b></span>                
                             <span>RAM: ${phone.ram}</span>                
                             <span>Camera: ${phone.camera}</span>                
                             <span>Pin: ${phone.battery} mAh</span>                                                  
                         </div>
-                        <button class='addtocart'>Mua ngay <i class="fa-sharp fa-solid fa-cart-plus"></i></button>
+                        <button class='addtocart'>Thêm vào giỏ hàng <i class="fa-sharp fa-solid fa-cart-plus"></i></button>
                     </div>`;
             }
  }
  renderProduct()
-//Nút "Mua hàng"
-// function showCart(){
-//     let form = document.querySelector('.form');
-//     form.style.display = 'block';
-//  }
+
+//  function formatCurrency(number){
+//     return number.toLocaleString('vi-VN', {style : 'currency', currency : 'VND'});
+// }
+
+
 
 
 // function addToCart(){
@@ -68,20 +71,3 @@ class Mobile {
 //     }
 // }
 
-/*
-const btn = document.querySelectorAll('button');
-// console.log(btn);
-btn.forEach(function(button,index){
-    // console.log(button);
-    button.addEventListener("click", function(evt){
-        var btnItem = evt.target;
-        var product = btnItem.parentElement;
-        var productName = product.querySelector('.name').innerText;
-        var productCost = product.querySelector('.cost').innerText;        
-        addtoCart(productName,productCost)
-    })
-})
-function addtoCart(productName,productCost){
-    
-}
- */

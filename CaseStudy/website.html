@@ -15,7 +15,7 @@
         </div>
         <div class="header-bottom">
             <div class="header-bottom-1">
-                <img src="images/CodeGym-3-02-copy-removebg-preview.png" alt="">
+                <img src="images/Black___Beige_Minimalist_Fashion_Brand_Logo-removebg-preview.png" alt="">
             </div>
             <div class="header-bottom-2">
                 <input type="text" placeholder="Tìm kiếm">                
@@ -49,20 +49,39 @@
             </div>
         </div>
     </div>
-    <div>    
+    <div class="form-div">    
         <form class="form">
-            
-            <h3 style="text-align: center; color: blue;">Giỏ hàng</h3>
-            
-            <div class="form-input" style="border-bottom: 1px solid;">
-                <div style="display: flex">
-                    <div class="input">iPhone 14 Pro Max &nbsp; </div>
-                    <div class="">Giá: 1200000 &nbsp;</div>
-                    <div class=""><button class="remove-cart" type='button' style="width:40px">Xoá</button></div><br>          
-                </div>   
-            </div>                                 
+            <table width="100%">
+                <caption><h3 style="text-align: center; color: blue;">Giỏ hàng</h3></caption>
+                <thead>
+                    <tr style="text-align: center;">
+                        <td>Sản phẩm</td>
+                        <td>Giá</td>
+                        <td>SL</td>
+                        <td>&nbsp;&nbsp;&nbsp;</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>iPhone 14 Pro Max</td>
+                        <td style="text-align: right;"><span>1200000</span><sup>đ</sup></td>
+                        <td style="text-align: right;"><input type="number" min="1" style="width:30px"></td>
+                        <td ><button class="remove-cart" type='button' style="width:40px">Xoá</button></td>
+                    </tr> -->                    
+                </tbody>
+                <tfoot class="totalCart">                    
+                        <td style="text-align: center;">Tổng cộng</td>
+                        <td style="text-align: center;"><span>0</span><sup>đ</sup></td>
+                    
+                </tfoot>
+            </table>
+                                        
         </form>
     </div>
+
+
+   
     <script src="website.js"></script>
+    <script src="cart.js"></script>
 </body>
 </html>
