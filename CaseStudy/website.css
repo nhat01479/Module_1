@@ -159,16 +159,20 @@ input{
     margin: 10px;
 }
 .form-div{
-    display: none;
+    /* display: none; */
     position: fixed;
+    width: 500px;
     left: 600px;
-    top: 300px;
+    top: 200px;
     border-radius: 10px;
-    background-color: rgb(171, 219, 241);
+    background-color: #ddd;
+    padding: 12px 20px;
+    overflow-y: scroll;
+
 }
 .form{
     /* display: none; */
-    width: 500px;
+    
     /*background: rgba(0,0,0,0.1);*/
     /* position: fixed; */
     border-radius: 10px;

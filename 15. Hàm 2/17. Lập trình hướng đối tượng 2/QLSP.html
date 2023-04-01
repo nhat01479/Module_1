@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px solid;
+            width: 500px;
+            border-collapse: collapse;
+
+        }
+        th, td{
+            border: 1px solid;
+            border-collapse: collapse;
+            height: 25px;
+        }
+       button{
+        border: none;
+        color: white;
+        background-color: rgb(17, 119, 13);
+        border-radius: 5px;
+       }
+       .edit, .delete{
+        text-align: center;
+       }
+       button:hover{
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="input-value" placeholder="Nhập tên sản phẩm"><button type="button" onclick="addEventListener('click',addProduct())">Add</button>
+    </div>
+    <table>
+        <caption>Display All product</caption>
+        <thead>
+            <th colspan="2"><b>Product Name</b></th>
+            <th>Số lượng</th>
+        </thead>
+        <tbody class="mobiles">
+            <!-- <tr>
+                <td>Sony</td>
+                <td class='edit'><button type="button">Edit</button></td>
+                <td class="delete"><button type="button">Delete</button></td>
+            </tr>
+           -->
+        </tbody>
+    </table>
+</body>
+<script>
+    let arr = ['iPhone', 'Xiaomi', 'Samsung'];
+
+    function renderPhone(){
+        let data = '';
+        for (let i=0; i<arr.length; i++){
+            data += `
+            <tr>
+                <td>${arr[i]}</td>
+                <td class='edit'><button type="button" onclick="editProduct(${i})">Edit</button></td>
+                <td class="delete"><button type="button" onclick=deleteProduct(${i})>Delete</button></td>
+            </tr>
+            `
+        }
+        document.querySelector('.mobiles').innerHTML = data;
+    }
+    renderPhone()
+
+    function addProduct(){
+        let value = document.querySelector('#input-value').value
+        arr.push(value);
+        renderPhone()
+    }
+
+    function deleteProduct(index){
+        arr.splice(index,1);
+        renderPhone();
+    }
+
+    function editProduct(index){
+        let newName = prompt('Nhập tên cần sửa');
+        arr[index] = newName;
+        renderPhone();
+    }
+
+    
+</script>
+</html>

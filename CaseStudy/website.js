@@ -60,14 +60,5 @@ class Mobile {
 
 
 
-// function addToCart(){
-//     document.querySelector('.form-input').innerHTML = '';
-//     for (let phone of mobiles){
-//         document.querySelector('.form-input').innerHTML = `
-//         <div class="input">${phone.name} &nbsp; </div>
-//                 <div>Giá: ${phone.cost} &nbsp;</div>
-//                 <div><button class="remove-cart" type='button' style="width:40px">Xoá</button></div><br> 
-//         `
-//     }
-// }
+
 
