@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container-header">
+        <img src="images/CodeGym.png" alt="banner">
+    </div>
+    <div class="container-body">
+        <div class="info-div">
+            <table class="info-table">                    
+                <tbody>
+                    <tr>
+                        <th colspan="4" style="text-align: center;">QUẢN LÝ SÁCH MƯỢN</th>
+                    </tr>
+                    <tr>                        
+                        <th colspan="2" style="font-size: 120%; text-align: center;">Thông tin sách</th>
+                        <th colspan="2" style="font-size: 120%; text-align: center;">Thông tin người mượn</th>
+                    </tr>
+                    <tr>
+                        <th class="info"><p>Mã sách</p></th>
+                        <td><input type="text" id="bookid" required></td>
+                        <th class="info"><p>Mã độc giả</p></th>
+                        <td><input type="text" id="readerid" required></td>
+                    </tr>
+                    <tr>
+                        <th class="info"><p>Loại sách</p></th>
+                        <td>
+                            <select id="booktype">
+                                <option value="Kinh tế">Kinh tế</option>
+                                <option value="Lịch sử">Lịch sử</option>
+                                <option value="Khoa học">Khoa học</option>
+                                <option value="Pháp luật">Pháp luật</option>
+                            </select>
+                        </td>
+                        <th class="info"><p>Họ và tên</p></th>
+                        <td><input type="text" id="name" required></td>
+                    </tr>
+                    <tr>
+                        <th class="info"><p>Mã tác giả</p></th>
+                        <td><input type="text" id="authorid" required></td>
+                        <th class="info"><p>Ngày mượn</p></th>
+                        <td><input type="date" id="borrowedate" required></td>
+                    </tr>
+                    <tr>
+                        <th class="info"><p>Số lượng</p></th>
+                        <td><input type="number" min="1" id="quantity" required></td>
+                        <th class="info"><p>Ngày hẹn trả</p></th>
+                        <td><input type="date" id="backdate" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: center;font-size: 150%; border-bottom: 0.5px solid grey;"><button type="button">Xác nhận</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="list-div">  
+            <table class="list-table">
+                <thead>
+                        <tr>
+                            <th colspan="8" style="text-align: center;font-size: 120%;padding: 20px; width: 1000px">DANH SÁCH MƯỢN</th>
+                        </tr>
+                        <tr style="margin-bottom: 10px; border-bottom: 0.5px solid grey;">
+                            <th>STT</th>
+                            <th>Mã sách</th>
+                            <th>Loại sách</th>
+                            <th>Mã tác giả</th> 
+                            <th>Số lượng</th>
+                            <th>Mã độc giả</th>
+                            <th>Họ và tên</th>                                             
+                            <th>Ngày mượn</th>
+                            <th>Ngày trả</th>
+                            <th>Xóa/ Sửa</th>
+                        </tr>                        
+                </thead>
+                <tbody class="show-list">
+                    <!-- <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button type="'button">Chỉnh sửa</button><button type="'button">Xóa</button></td>
+                    </tr> -->
+                </tbody>
+            </table>          
+        </div>
+    </div>
+
+    
+</body>
+<script src="main.js"></script>
+</html>
