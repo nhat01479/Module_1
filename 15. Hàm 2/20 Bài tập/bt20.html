@@ -10,31 +10,109 @@
 		<h3>Bài 20: Liệt kê các dòng có tổng lớn nhất</h3>
 	</body>
 	<script>
-		let arr = [
-			[1, 2, 7],
-			[6, 9, 4],
-			[6, 8, 5],
-		];
+		// let arr = [
+		// 	[1, 2, 7],
+		// 	[6, 9, 4],
+		// 	[6, 8, 5],
+		// ];
 
-        function maxRow(a){
-            let max = null;
-            let total = 0;
-            let index;
-            let result=[];
-            for (let i = 0; i < a.length; i++) {
-                for (let j = 0; j < a[i].length; j++) {
-                    total += a[i][j];                    
-                }
-                if (total > max) {
-                        max = total;
-                        index = i;
-                    }
-                total = 0;
-            }
-            result.push(a[index]);
-            return result;
+        // function MaxRow(a){
+        //     let max = null;
+        //     let total = 0;
+        //     let index;
+        //     let result=[];
+        //     for (let i = 0; i < a.length; i++) {
+        //         for (let j = 0; j < a[i].length; j++) {
+        //             total += a[i][j];                    
+        //         }
+        //         if (total > max) {
+        //                 max = total;
+        //                 index = i;
+        //             }
+        //         total = 0;
+        //     }
+        //     result.push(a[index]);
+        //     return result;
+        // }
+        // console.log(MaxRow(arr));
+
+ //----------------------------------------------
+
+//         let matrix = [
+// 			[1, 2, 7],
+// 			[6, 9, 4],
+// 			[6, 8, 5],
+// 		];
+
+// var MaxRow = 0;
+// var indexOfMaxRow = 0;
+// for (var j = 0; j < matrix[0].length; j++) {
+// MaxRow += matrix[0][j];
+// }
+// for (var i = 1; i < matrix.length; i++) {
+// var totalOfThisRow = 0;
+// for (var j = 0; j < matrix[i].length; j++)
+// totalOfThisRow += matrix[i][j];
+// if (totalOfThisRow > MaxRow) {
+// MaxRow = totalOfThisRow;
+// indexOfMaxRow = i;
+// }
+// }
+// console.log("i " + indexOfMaxRow + " has the MaxRowmum sum of " + MaxRow);
+      
+//---------------------------------------------------------
+
+// var numbers = [
+//     [1, 2, 7],
+// 	[6, 9, 4],
+// 	[6, 8, 5],
+//     ];
+    
+// function maxSumRow(matrix){
+//         let sumArr = [];
+//         for(var row = 0; row<matrix.length;row++){
+//             let sum=0;
+//             for(var collumn = 0 ;collumn<matrix[row].length;collumn++){
+//                 sum+= matrix[row][collumn];
+//             }
+//             sumArr.push(sum);
+//         }
+//         let sumMax = sumArr[0];
+//         let index = 0;
+//         for(var i=1;i<sumArr.length;i++){
+//             if(sumMax<sumArr[i]){
+//                 sumMax = sumArr[i];
+//                 index = i;
+//             }
+//         }
+//         console.log(`Dòng có tổng lớn nhất là ${index} với tổng ${sumMax}`);
+//         for(var x= 0; x < sumArr.length; x++){
+//             if(sumArr[x]==sumMax){
+//                 console.log(`${x} - ${sumMax} - ${numbers[x]}`);
+//             }
+//         }        
+//     }
+//     console.log(maxSumRow(numbers));
+  
+   //--------------------Trộn ngẫu nhiên các phần tử của ma trận-------------------------------------------
+
+   var matrix = [
+    [1, 2, 7],
+	[6, 9, 4],
+	[6, 8, 5],
+    ];
+
+    for (var i = 0; i < matrix.length; i++) {
+        for (var j = 0; j < matrix[i].length; j++) {
+            var i1 = parseInt(Math.random() * matrix.length);
+            var j1 = parseInt(Math.random() * matrix[i].length);
+            var temp = matrix[i][j];
+            matrix[i][j] = matrix[i1][j1];
+            matrix[i1][j1] = temp;
         }
-        console.log(maxRow(arr));
-        
+    }
+console.log(matrix);
+    
+
 	</script>
 </html>

@@ -11,6 +11,7 @@
     <div><canvas id="myCanvas1" width="200" height="100"></canvas></div>
     <div><canvas id="myCanvas2" width="200" height="200"></canvas></div>
     <div><canvas id="myCanvas3" width="200" height="50"></canvas></div>
+    <div><canvas id="myCanvas4" width="300" height="300"></canvas></div>
 
 </body>
 <script>
@@ -34,5 +35,12 @@
    let ctx3 = char.getContext('2d');
    ctx3.font = '30px Times New Roman';  //font chữ
    ctx3.fillText('Hello World',10,50)  //10,50 tọa độ bắt đầu của văn bản
+
+/*--------------------------------------------*/
+
+    let r = document.getElementById('myCanvas4').getContext('2d');
+    r.fillStyle = 'green';
+    r.fillRect(10,20,50,30); //Tô hcn
+    r.strokeRect();          //Vẽ hcn
 </script>
 </html>

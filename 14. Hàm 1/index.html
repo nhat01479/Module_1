@@ -21,14 +21,20 @@
 //-------------------------------------------------------------------------------------
     
 function swap(x, y) {
-          a = y;
-          b = x;
+        let temp = x;
+          x = y;
+          y = temp;
+          document.write("a = " + x + ", b = " + y + '<br>');
         }
 
-        var a = 5;
+        var a = 5;    
         var b = 10;
-        swap(a, b);                                   
-        document.write("a = " + a + ", b = " + b);
+        swap(a, b);    // a=10, b=5                               
+        document.write("a = " + a + ", b = " + b); //a=5, b=10
+
+        //Giá trị a và b chỉ thực sự được hoán đổi bên trong hàm
+        //Bên ngoài hàm giá trị a,b vẫn không thay đổi
+        
 //--------------------------------------------------------------------------------------
     //   let total = 0; // toàn cục
     //   function sum(start, end) {
