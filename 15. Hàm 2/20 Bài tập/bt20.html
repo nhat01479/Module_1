@@ -62,56 +62,56 @@
       
 //---------------------------------------------------------
 
-// var numbers = [
-//     [1, 2, 7],
-// 	[6, 9, 4],
-// 	[6, 8, 5],
-//     ];
-    
-// function maxSumRow(matrix){
-//         let sumArr = [];
-//         for(var row = 0; row<matrix.length;row++){
-//             let sum=0;
-//             for(var collumn = 0 ;collumn<matrix[row].length;collumn++){
-//                 sum+= matrix[row][collumn];
-//             }
-//             sumArr.push(sum);
-//         }
-//         let sumMax = sumArr[0];
-//         let index = 0;
-//         for(var i=1;i<sumArr.length;i++){
-//             if(sumMax<sumArr[i]){
-//                 sumMax = sumArr[i];
-//                 index = i;
-//             }
-//         }
-//         console.log(`Dòng có tổng lớn nhất là ${index} với tổng ${sumMax}`);
-//         for(var x= 0; x < sumArr.length; x++){
-//             if(sumArr[x]==sumMax){
-//                 console.log(`${x} - ${sumMax} - ${numbers[x]}`);
-//             }
-//         }        
-//     }
-//     console.log(maxSumRow(numbers));
-  
-   //--------------------Trộn ngẫu nhiên các phần tử của ma trận-------------------------------------------
-
-   var matrix = [
+var numbers = [
     [1, 2, 7],
 	[6, 9, 4],
 	[6, 8, 5],
     ];
-
-    for (var i = 0; i < matrix.length; i++) {
-        for (var j = 0; j < matrix[i].length; j++) {
-            var i1 = parseInt(Math.random() * matrix.length);
-            var j1 = parseInt(Math.random() * matrix[i].length);
-            var temp = matrix[i][j];
-            matrix[i][j] = matrix[i1][j1];
-            matrix[i1][j1] = temp;
+    
+function maxSumRow(matrix){
+        let sumArr = [];
+        for(var row = 0; row<matrix.length;row++){
+            let sum=0;
+            for(var collumn = 0 ;collumn<matrix[row].length;collumn++){
+                sum+= matrix[row][collumn];
+            }
+            sumArr.push(sum);
         }
+        let sumMax = sumArr[0];
+        let index = 0;
+        for(var i=1;i<sumArr.length;i++){
+            if(sumMax<sumArr[i]){
+                sumMax = sumArr[i];
+                index = i;
+            }
+        }
+        console.log(`Dòng có tổng lớn nhất là ${index} với tổng ${sumMax}`);
+        for(var x= 0; x < sumArr.length; x++){
+            if(sumArr[x]==sumMax){
+                console.log(`${x} - ${sumMax} - ${numbers[x]}`);
+            }
+        }        
     }
-console.log(matrix);
+    maxSumRow(numbers);
+  
+   //--------------------Trộn ngẫu nhiên các phần tử của ma trận-------------------------------------------
+
+//    var matrix = [
+//     [1, 2, 7],
+// 	[6, 9, 4],
+// 	[6, 8, 5],
+//     ];
+
+//     for (var i = 0; i < matrix.length; i++) {
+//         for (var j = 0; j < matrix[i].length; j++) {
+//             var i1 = parseInt(Math.random() * matrix.length);
+//             var j1 = parseInt(Math.random() * matrix[i].length);
+//             var temp = matrix[i][j];
+//             matrix[i][j] = matrix[i1][j1];
+//             matrix[i1][j1] = temp;
+//         }
+//     }
+// console.log(matrix);
     
 
 	</script>
