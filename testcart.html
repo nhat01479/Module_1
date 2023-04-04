@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* border: 1px solid; */
+        }
+        .product-div{
+            display: flex;
+            width: 500px;
+            margin: auto;
+        }
+        .product{
+            display: block;
+            width: 50%;
+        }
+        img{
+            width: 100%;
+            height: 300px;
+        }
+        span{
+            display: block;
+            /* border: 1px solid; */
+        }
+
+    </style>
+   
+</head>
+<body>
+   <div class="product-div">
+    <!-- <div class='product'>
+        <div class='img-div'>            
+        <img class='img' src="" alt="">
+        </div>
+        <div class="detail">
+            <span>Tên</span>
+            <span>Giá</span>
+            <span>Số lượng</span>
+        </div>            
+    </div> -->
+   </div>
+   <div class="form-cart">
+    <form>
+        <table class="table-form">
+            <thead>
+                <th style="width:90%" colspan="3">Giỏ hàng</th>
+                <th>X</th>
+            </thead>
+            <tbody class="cart-item">
+                <!-- <tr>
+                    <td>ID</td>
+                    <td>Tên</td>
+                    <td>Giá</td>
+                    <td>Số lượng</td>
+                </tr> -->
+            </tbody>
+            <tfoot>
+                <th colspan="2">Thành tiền</th>
+                <th colspan="2" class="total-cart">0</th>
+            </tfoot>
+        </table>
+    </form>
+   </div>
+</body>
+<script>
+    class Product{
+        constructor(id, name, price, image, count){
+            this.Id = id;
+            this.name = name;
+            this.price = price;
+            this.image = image;
+            this.count = count;
+        }        
+    }
+
+    let products = [
+        new Product(1, 'Áo thun nam', 150000, 'https://bizweb.dktcdn.net/100/399/392/articles/ao-thun-nam-dep-gia-re-3.jpeg',10),
+        new Product(2, 'Áo thun nữ', 120000, 'https://www.thoitrangtichtac.com/productimg/18000/17653/255_Ao_thun_nu_tay_ngan_in_chu_see_look_at_b7653.jpg',12)
+    ];
+
+    function render(){
+        document.querySelector('.product-div').innerHTML = '';
+        for (let i=0; i<products.length; i++){
+            document.querySelector('.product-div').innerHTML += `
+            <div class='product'>
+                <div class='img-div'>            
+                <img class='img' src="${products[i].image}" alt="">
+                </div>
+                <div class="detail">
+                    <span>${products[i].name}</span>
+                    <span>${products[i].price.toLocaleString()}</span>
+                    <span>${products[i].count}</span>
+                    <span><button class='addToCart()'>Add To Cart</button></span>
+                </div>            
+            </div>
+            `            
+        }
+    }
+    render()
+    function convertMoney(num) {
+    return num.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+    }
+    
+    class CartItem{
+        constructor(id, name, price, count){
+            this.id = id; 
+            this.name = name;
+            this.price = price;
+            this.count = count;
+        }
+    }
+    
+    class Cart {
+        constructor(){
+            this.cartItems = [];
+        }
+        total(){
+            let sumTotal = 0;
+            for (let cartItem of this.cartItems){
+                sumTotal += cartItem.total
+            }
+            return sumTotal;
+        }
+    }
+</script>
+</html>
