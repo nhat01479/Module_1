@@ -14,80 +14,146 @@
     </div>
 </body>
 <script>
-    class Mobile{
-        constructor(battery){
-            this.battery = battery;
-            this.setMess = []; //tin nhắn đang soạn
-            this.sendMess = [];   //tin nhắn đã gửi
-            this.receiveMess = []; //tin nhắn đã nhận
-            this.status = 'on';
-        }
-        checkStatus(){
-            return this.status;
-        };
-        turnOn(){    
-            if (this.status='off')  return this.status='on';        
-        };
-        turnOff(){
-            if (this.status='on')  return this.status='off';
-        }
-        decreaseBattery(){
-            this.battery--;
-            if (this.battery == 0) return console.log('Hết pin');
-        }
-        charge(){
-            if (this.battery == 100) return;
-            this.battery++;
-            this.charge();
-        }
-        setMess(){             //soạn tin
-            if (this)
-            decreaseBattery();
-            return this.setMess;
-        }
-        receiveM(){      //nhận tin            
-            decreaseBattery();
-            return this.receiveMess;
-        }
-        sendM(){                 //gửi tin
-            decreaseBattery();
+     class Mobile{
+            // 
+            constructor(battery, status){
+                this.battery = battery;
+                this.message = "";
+                this.inbox = [];    // hộp thư đến
+                this.sent = [];     // đã gửi
+                this.status = status;
+            }
+            decreaseBattery(){
+                if(this.battery>0){
+                    this.battery--;
+                }else{
+                    this.status = false;
+                }
+            }
+            isEnable(){
+                
+                return this.status;
+            }
+            setStatus(status){
+                this.status = status;
+                decreaseBattery();
+            }
+            /**
+            async charge(){
+                // cập nhật lại this.battery
+                if(this.battery == 100){
+                    return;
+                }
+                console.log("Pin: " + this.battery);
+                this.battery++;
+                await delay(1000);
+                this.charge();
+                function delay(time) {
+                    return new Promise(resolve => setTimeout(resolve, time));
+                }
+            }
+            **/
+
+            charge(){
+                // cập nhật lại this.battery
+                if(this.battery == 100){
+                    return;
+                }
+                console.log("Pin: " + this.battery);
+                this.battery++;
+                delayWrap(this);
+
+                console.log("------------");
+                function delay(time) {
+                    return new Promise(resolve => setTimeout(resolve, time));
+                }
+                async function delayWrap(mobile){
+                    await delay(100);
+                    mobile.charge();
+                }
+            }
+
+                // Thead(A: 10p)=> thread khác
+                // let a = 5;
+                // const interval = setInterval(this.charge, 1000);
+
+                /**
+                    if(this.battery == 100){
+                        return;
+                    }
+                    this.battery++;
+                    this.charge();
+                **/
+
+
+                
             
-        }
-        showInbox(){        //xem hộp thư đến
-            decreaseBattery();
-            this.receiveMess
-        }
-        showOutbox(){        //xem hộp thư đi
-            decreaseBattery();
+            setMessage(message){
+                if(this.status){
+                    this.message = message;
+                    decreaseBattery();
+                }
 
+                
+            }
+            receiveMessageFromMobile(mobile){
+                if(this.status){
+                    this.inbox.push(mobile.message);
+                    mobile.sent.push(mobile.message);
+                    decreaseBattery();
+                }
+                
+                // trừ pin ở đây
+            }
+            // this: nokia,  mobile: iphone: sent[]
+            sendMessageToMobile(mobile){
+                if(this.status){
+                    mobile.inbox.push(this.message);
+                    this.sent.push(this.message);
+                    decreaseBattery();
+                }
+                
+                    
+            }
+            showInboxMessage(){
+                if(this.status){
+                    console.log("Danh sách tin nhắn đến:");
+                    for(let i=0;i<this.inbox.length;i++){
+                        console.log(this.inbox[i]);
+                    }
+                }
+            }
+            showSentMessage(){
+                if(this.status)
+                {
+                    console.log("Danh sách tin nhắn đã gửi:");
+                    for(let i=0;i<this.sent.length;i++){
+                        console.log(this.sent[i]);
+                    }
+                    decreaseBattery();
+                }
+            }
         }
+        let nokia = new Mobile(1, false);
+        nokia.isEnable(true);
 
-    }
-    let nokia = new Mobile(10);
-    let iphone = new Mobile(10);
+        nokia.charge();
+        console.log("*************" + nokia.battery);
 
-    /*----------------------------------------------------------------------------------------
-class Mobile{
-    constructor(id, name){
-        this.id = id;
-        this.name = name;
-        this.message = '';
-    }
-    setMess(message){       //viết tin nhắn
-        this.message = message;
-    }
-    getMess(){          //nhận tin nhắn
-        return this.message;
-    }
-    sendMess(message,mobile){   //gửi tin nhắn
-        mobile.setMess(message);
-    }
-}
-let iphone = new Mobile(1, 'iPhone');
-let samsung = new Mobile(1, 'SamSung');
-iphone.sendMess('Hello bro!',samsung); //gửi tin nhắn từ iphone tới ss
-let message = samsung.getMess();        //ss kiểm tra tin nhắn từ iphone gửi tới 
-console.log(message);
-*/
+        
+        let iphone  = new Mobile(100, true);
+
+        nokia.setMessage("Hello nokia đây");
+        nokia.sendMessageToMobile(iphone);
+
+        iphone.showInboxMessage();
+
+        nokia.setMessage("Tao nhắn tiếp đây");
+        nokia.sendMessageToMobile(iphone);
+
+        nokia.setMessage("Tiếp cú nữa");
+        nokia.sendMessageToMobile(iphone);
+
+        iphone.showInboxMessage();
 </script>
 </html>
